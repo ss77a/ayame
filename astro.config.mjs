@@ -12,7 +12,7 @@ import partytown from '@astrojs/partytown';
 import { remarkReadingTime } from './src/utils/frontmatter.js';
 
 import { SITE } from './src/config.mjs';
-
+import critters from 'astro-critters';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
@@ -27,6 +27,7 @@ export default defineConfig({
 	integrations: [
 		tailwind({
 			config: {
+				path: './tailwind.config.cjs',
 				applyBaseStyles: false,
 			},
 		}),
@@ -38,10 +39,22 @@ export default defineConfig({
 
 		/* Disable this integration if you don't use Google Analytics (or other external script). */
 		partytown({
-			config: { forward: ['dataLayer.push'] },
+			config: {
+				forward: ['dataLayer.push'],
+			},
+		}),
+		critters({
+			path: './dist',
+			logger: 'debug',
+			logLevel: 'debug',
+			compress: true,
+			pruneSource: true,
+			preload: 'swap',
+			inlineFonts: true,
+			keyframes: 'critical',
 		}),
 	],
-
+	/* this is an extension of mdx - a message says that the mdx call should be removed it causes issues. as does removing the extension - images wont build from blog files */
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		extendDefaultPlugins: true,
