@@ -1,8 +1,16 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const forms = require("@tailwindcss/forms");
+const clamp = require("@tailwindcss/line-clamp");
+const ratio = require("@tailwindcss/aspect-ratio");
+const typog = require("@tailwindcss/typography");
+const catppuccin = require("@catppuccin/tailwindcss");
+const DaisyUI = require("daisyui");
+
+console.table(catppuccin);
 
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
+	content: ["./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
 			colors: {
@@ -15,14 +23,17 @@ module.exports = {
 		},
 	},
 	plugins: [
-		require('@tailwindcss/forms'),
-		require('@tailwindcss/line-clamp'),
-		require('@tailwindcss/aspect-ratio'),
-		require('@tailwindcss/typography'),
-		require('@catppuccin/tailwindcss'),
-		require('daisyui'),
+		catppuccin({
+			prefix: false,
+			defaultFlavour: "mocha",
+		}),
+		DaisyUI,
+		forms,
+		clamp,
+		ratio,
+		typog,
 	],
-	darkMode: 'class',
+	darkMode: "class",
 	daisyui: {
 		styled: true,
 		themes: [
@@ -34,7 +45,6 @@ module.exports = {
 					// accent: '#e6cefe',
 					// neutral: '#8c8d8f',
 					// 'base-100': '#d9d7d9',
-
 					// '--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
 					// '--rounded-btn': '0.5rem', // border radius rounded-btn utility class, used in buttons and similar element
 					// '--rounded-badge': '1.9rem', // border radius rounded-badge utility class, used in badges and similar
@@ -47,7 +57,7 @@ module.exports = {
 					// '--tab-radius': '0.5rem', // border radius of tabs
 				},
 				macchiato: {},
-				mocha: {}
+				mocha: {},
 			},
 		],
 	},
