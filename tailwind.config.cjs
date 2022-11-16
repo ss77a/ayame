@@ -1,16 +1,16 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
-const forms = require("@tailwindcss/forms");
-const clamp = require("@tailwindcss/line-clamp");
-const ratio = require("@tailwindcss/aspect-ratio");
-const typog = require("@tailwindcss/typography");
-const catppuccin = require("@catppuccin/tailwindcss");
-const DaisyUI = require("daisyui");
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
+const forms = require('@tailwindcss/forms');
+const clamp = require('@tailwindcss/line-clamp');
+const ratio = require('@tailwindcss/aspect-ratio');
+const typog = require('@tailwindcss/typography');
+const catppuccin = require('@catppuccin/tailwindcss');
+const DaisyUI = require('daisyui');
 
 console.table(catppuccin);
 
 module.exports = {
-	content: ["./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}"],
+	content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
 			colors: {
@@ -25,7 +25,7 @@ module.exports = {
 	plugins: [
 		catppuccin({
 			prefix: false,
-			defaultFlavour: "mocha",
+			defaultFlavour: 'mocha',
 		}),
 		DaisyUI,
 		forms,
@@ -33,7 +33,7 @@ module.exports = {
 		ratio,
 		typog,
 	],
-	darkMode: "class",
+	darkMode: 'class',
 	daisyui: {
 		styled: true,
 		themes: [
