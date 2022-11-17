@@ -1,15 +1,16 @@
 export const SITE = {
-	name: 'AstroWind',
+	name: 'Ayame6',
 
-	origin: 'https://astrowind.vercel.app',
+	origin: 'https://ayame6.vercel.app/',
 	basePathname: '/',
 	trailingSlash: false,
 
-	title: 'AstroWind — Your website with Astro + Tailwind CSS',
-	description: '🚀 AstroWind is a free and ready to start template to make your website using Astro and Tailwind CSS.',
+	title: 'Ayame6 — Your website with Astro + Tailwind CSS using catppuccin theme flavours. Easy to make your own',
+	description:
+		'Ayame6 is based on the ayame 🚀 Project. Either are free and ready to start templates to make your website using Astro and Tailwind CSS.',
 
-	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
+	googleAnalyticsId: 'UA-249875216-1',
+	googleSiteVerificationId: 'wElF19ujN9ekDubCnx5X2cdUu7AuABP6D0rsPGTdnTQ',
 };
 
 export const BLOG = {
