@@ -9,7 +9,7 @@ export const SITE = {
 	description:
 		'Ayame6 is based on the ayame 🚀 Project. Either are free and ready to start templates to make your website using Astro and Tailwind CSS.',
 
-	googleAnalyticsId: 'UA-249875216-1',
+	googleAnalyticsId: false, //  or 'UA-249875216-1',
 	googleSiteVerificationId: 'wElF19ujN9ekDubCnx5X2cdUu7AuABP6D0rsPGTdnTQ',
 };
 
