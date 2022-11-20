@@ -1,0 +1,29 @@
+---
+
+import 'node_modules/daisyui/dist/themes.css';
+import 'node_modules/daisyui/dist/styled.css';
+
+import '../../assets/css/base.css';
+
+import MetaTags from '~/components/core/MetaTags.astro';
+import BasicScripts from '~/components/core/BasicScripts.astro';
+
+const { meta = {} } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html id="root" lang="en" class="latte dark:macchiato motion-safe:scroll-smooth font-light 2xl:text-[20px] no-js">
+	<head>
+		<MetaTags {...meta} />
+	</head>
+
+	<body class="latte dark:macchiato antialiased bg-base frappe-text dark:text-flamingo tracking-tight dark:bg-base">
+		<slot />
+		<BasicScripts />
+		<style is:global>
+			img {
+				content-visibility: auto;
+			}
+		</style>
+	</body>
+</html>
