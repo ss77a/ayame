@@ -1,7 +1,8 @@
 dist
 node_modules
 .github
-public/assets/js/
+public/assets/js/vendor
+public/assets/css/vendor
 
 # .temp
 .temp.*
