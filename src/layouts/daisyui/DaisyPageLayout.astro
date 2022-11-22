@@ -15,7 +15,7 @@ const { meta } = Astro.props;
 		<div class="drawer-content flex flex-col">
 			<!-- Navbar -->
 			<Header
-				class="w-full navbar bg-base-300 mx-auto bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b0"
+				class="w-full navbar bg-base-300 mx-auto bg-white md:surface-0-200/90 dark:surface-0-600 dark:md:surface-0-700/90 md:backdrop-blur-sm border-b dark:border-b0"
 			>
 				<div slot="end" class="flex-none lg:hidden">
 					<label for="my-drawer-3" class="btn btn-square btn-ghost">
@@ -38,7 +38,7 @@ const { meta } = Astro.props;
 			<Cookify />
 		</div>
 		<div class="drawer-side">
-			<label for="drawer" class="drawer-overlay"></label>
+			<label for="drawer" class="drawer-overlay overlay-0-100 dark:overlay-0-100"></label>
 			<ul class="menu p-4 w-80 bg-base-100">
 				<Logo classes="logo" width="96" height="96" alt="" />
 				<!-- Sidebar content here -->
