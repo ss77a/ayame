@@ -1,7 +1,7 @@
 ---
 import { SITE } from '~/config.mjs';
-import { getCanonical, getHomePermalink } from '~/utils/permalinks';
-import Layout from '~/layouts/PageLayout.astro';
+import { getCanonical, getHomePermalink, getPermalink } from '~/utils/permalinks';
+import Layout from '~/layouts/daisyui/DaisyPageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -18,11 +18,63 @@ const meta = {
 	description: SITE.description,
 	canonical: getCanonical(getHomePermalink()),
 };
+
+import landScapeImage from '~/assets/images/demo/landscapes/Bridge.jpg';
+console.table(landScapeImage['src']);
+const style = { backgroundImage: 'url(' + landScapeImage['src'] + ')' };
 ---
 
 <Layout {meta}>
+	<div class="hero min-h-screen" {style}>
+		<div class="hero-overlay bg-opacity-60"></div>
+		<div class="hero-content text-center text-neutral-content">
+			<div class="max-w-md">
+				<h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+				<p class="mb-5">
+					Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
+					eaque aut repudiandae et a id nisi.
+				</p>
+				<button class="btn btn-primary">Get Started</button>
+			</div>
+		</div>
+	</div>
 	<Hero />
-	<Features />
+	<Features>
+		<section class="w-full m-5 flex">
+			<div class="sub">
+				<div class="item">
+
+					<p><a href={getPermalink('demo/glide')}>glide a customisable responsive slideshow. The component can be customised and many variations of the component can be used and mixed to make various common site features</a></p>
+
+				</div>
+			</div>
+			<div class="sub">
+				<div class="item">
+
+					<p><a href={getPermalink('demo/astrowind')}>astrowind (the origins of this project) a feature rich astro starter template take your project to the next galaxy in a few auto completed tabs <small>if you have the right setup and edit the corresponding configs</small></a></p>
+
+				</div>
+			</div>
+
+			<div class="sub">
+				<div class="item">
+
+					<p><a href={getPermalink('demo/glightbox')}>glightbox a versitle lightbox variation that handles mixed media and can display descripts and group class links into galleries customisable</a></p>
+
+				</div>
+			</div>
+			<div class="sub">
+				<div class="item">
+
+					<p><a href={getPermalink('demo/cookify')}>cookify nice friendly cookie banner. Scripts are categorized and manged according to user choices</a></p>
+
+				</div>
+			</div>
+
+
+			
+		</section>
+	</Features>
 	<Steps />
 	<Features2 />
 	<Features3 />

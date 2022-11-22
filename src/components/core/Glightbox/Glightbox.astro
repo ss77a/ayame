@@ -1,0 +1,102 @@
+---
+import path from "node:path";
+import { Icon } from 'astro-icon';
+import Picture from '~/components/core/Picture.astro';
+// import '~/assets/css/glightbox.css';
+// import '~/assets/css/plyr.css';
+import '@pkg/glightbox/dist/css/glightbox.css';
+import '@pkg/glightbox/dist/css/plyr.css';
+// make new heros for pages.
+
+interface Props {
+  src?: string;
+  href?: string;
+  class?: string;
+}
+
+const { class = "glightbox" } = Astro.props;
+---
+<section>
+	<a href="https://placeskull.com/1200/800" class="glightbox">
+		<img src="https://placeskull.com/300/200" alt="image" />
+	</a>
+
+<!-- Simple image -->
+<!-- a href="https:://placeskull.com/1200/800" class="glightbox" data-glightbox="type: image">
+  <img src="https://placeskull.com/300/200" alt="image" />
+</a -->
+
+<!-- Video -->
+<a href="https://player.vimeo.com/video/747605362?h=5dc458ab4d" class="glightbox" data-glightbox="type: image">
+  <img src="https://placeskull.com/300/200" alt="image" />
+</a>
+
+<!-- Gallery -->
+<a href="https://placeskull.com/1200/800" class="glightbox" data-gallery="gallery1" data-glightbox="type: image">
+  <img src="https://placeskull.com/300/200" alt="image" />
+</a>
+<a href="video.mp4" class="glightbox" data-gallery="gallery1" data-glightbox="type: image" >
+  <img src="https://placeskull.com/300/200" alt="image" />
+</a>
+
+<!-- Simple Description -->
+  <a href="https://placeskull.com/1200/800" class="glightbox" data-glightbox="title: My title; description: this is the slide description; type: image">
+  <img src="https://placeskull.com/300/200" alt="image" />
+</a>
+
+<!-- Advanced Description -->
+  <a href="https://placeskull.com/1200/800" class="glightbox" data-glightbox="title: My title; description: .custom-desc1; type: image">
+  <img src="https://placeskull.com/300/200" alt="image" />
+</a>
+
+<div class="glightbox-desc custom-desc1">
+  <p>The content of this div will be used as the slide description</p>
+  <p>You can add links and any HTML you want</p>
+</div>
+
+<!-- URL with no extension -->
+<a href="https://picsum.photos/1200/800" class="glightbox" data-glightbox="type: image">
+  <img src="https://placeskull.com/300/200" alt="image" />
+</a>
+<!-- OR using multiple data attributes -->
+<a href="https://picsum.photos/1200/800" data-type="image" class="glightbox">
+  <img src="https://placeskull.com/300/200" alt="image" />
+</a>
+
+<!-- Using responsive images: specify sizes and srcset through data attributes in the
+     same way you would with the img tag.
+     See: https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images -->
+<a href="https://placeskull.com/1200/800" class="glightbox" data-glightbox="type: image" data-title="Responsive example"
+data-description="Your browser will choose the optimal image for the resolution"
+data-sizes="(max-width: 600px) 480px, 800px"
+data-srcset="img480.jpx 480w img800.jpg 800w">
+  <img src="https://placeskull.com/300/200" alt="image" />
+</a>
+
+
+
+        <slot />
+
+</section>
+
+<style is:inline type="text/postcss">
+
+body:fullscreen {
+    background: #fff3fc;
+}
+
+body:not(:fullscreen) {
+  background: #121211;
+}
+
+</style>
+
+<script is:inline src="/assets/js/vendor/glightbox.min.js"></script>
+
+<script>
+	// import {GLightbox} from "../../../assets/js/vendor/glightbox";
+
+            var lightboxDescription = GLightbox({
+                selector: '.glightbox'
+            });
+</script>

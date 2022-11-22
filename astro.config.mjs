@@ -10,6 +10,7 @@ import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 
 import { remarkReadingTime } from './src/utils/frontmatter.js';
+import Inspect from 'vite-plugin-inspect';
 
 import { SITE } from './src/config.mjs';
 import critters from 'astro-critters';
@@ -61,9 +62,11 @@ export default defineConfig({
 	},
 
 	vite: {
+		plugins: [Inspect()],
 		resolve: {
 			alias: {
 				'~': path.resolve(__dirname, './src'),
+				'@pkg': path.resolve(__dirname, './node_modules'),
 			},
 		},
 	},
