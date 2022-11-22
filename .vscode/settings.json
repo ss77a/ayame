@@ -9,5 +9,12 @@
   "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "cSpell.words": [
+    "astro",
+    "catppuccin",
+    "daisyui",
+    "tailwindcss",
+    "typog"
+  ]
 }

@@ -24,3 +24,6 @@ pnpm-lock.yaml
 
 # .temp
 .temp.*
+
+# skits directory
+.skits/

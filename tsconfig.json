@@ -10,7 +10,7 @@
             "~/*": [
                 "src/*"
             ],
-            "node_modules/*": [
+            "@pkg/*": [
                 "node_modules/*"
             ]
         }

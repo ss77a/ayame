@@ -1,0 +1,700 @@
+{
+  "mocha": {
+    "description": "Color theme tokens at lightness of 100%, contrast of 110.00000000000001%",
+    "Background": {
+      "value": "#ffffff",
+      "type": "color",
+      "description": "UI background color. All color contrasts evaluated and generated against this color."
+    },
+    "rosewater100": {
+      "value": "#a69693",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "rosewater200": {
+      "value": "#887c79",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "rosewater300": {
+      "value": "#5f5654",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "rosewater400": {
+      "value": "#3d3736",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "rosewater500": {
+      "value": "#221e1e",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "rosewater600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "flamingo100": {
+      "value": "#ad9393",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "flamingo200": {
+      "value": "#8f7979",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "flamingo300": {
+      "value": "#635554",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "flamingo400": {
+      "value": "#403636",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "flamingo500": {
+      "value": "#231e1e",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "flamingo600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "mauve100": {
+      "value": "#ab8cd0",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "mauve200": {
+      "value": "#8d73ab",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "mauve300": {
+      "value": "#625077",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "mauve400": {
+      "value": "#3f344c",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "mauve500": {
+      "value": "#231c2a",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "mauve600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "red100": {
+      "value": "#da7d97",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "red200": {
+      "value": "#b4677c",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "red300": {
+      "value": "#7d4857",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "red400": {
+      "value": "#502e38",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "red500": {
+      "value": "#2c191f",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "red600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "maroon100": {
+      "value": "#c88892",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "maroon200": {
+      "value": "#a47078",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "maroon300": {
+      "value": "#734e54",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "maroon400": {
+      "value": "#4a3236",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "maroon500": {
+      "value": "#281c1d",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "maroon600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "peach100": {
+      "value": "#c58d6a",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "peach200": {
+      "value": "#a27457",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "peach300": {
+      "value": "#71513d",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "peach400": {
+      "value": "#493427",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "peach500": {
+      "value": "#281c15",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "peach600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "yellow100": {
+      "value": "#a79975",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "yellow200": {
+      "value": "#8a7d61",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "yellow300": {
+      "value": "#605743",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "yellow400": {
+      "value": "#3e382b",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "yellow500": {
+      "value": "#211f17",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "yellow600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "green100": {
+      "value": "#78a474",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "green200": {
+      "value": "#628760",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "green300": {
+      "value": "#455e43",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "green400": {
+      "value": "#2c3c2b",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "green500": {
+      "value": "#182118",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "green600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "teal100": {
+      "value": "#6ba49a",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "teal200": {
+      "value": "#58877f",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "teal300": {
+      "value": "#3d5e59",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "teal400": {
+      "value": "#273c39",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "teal500": {
+      "value": "#16211f",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "teal600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "sky100": {
+      "value": "#5da2bf",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "sky200": {
+      "value": "#4d859e",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "sky300": {
+      "value": "#365d6e",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "sky400": {
+      "value": "#223c46",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "sky500": {
+      "value": "#132126",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "sky600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "blue100": {
+      "value": "#8e97c8",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "blue200": {
+      "value": "#757ca6",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "blue300": {
+      "value": "#515773",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "blue400": {
+      "value": "#34374a",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "blue500": {
+      "value": "#1d1e29",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "blue600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "lavender100": {
+      "value": "#8e97c8",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "lavender200": {
+      "value": "#757ca6",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "lavender300": {
+      "value": "#515773",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "lavender400": {
+      "value": "#34374a",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "lavender500": {
+      "value": "#1d1e29",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "lavender600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "text1100": {
+      "value": "#9199b4",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "text1200": {
+      "value": "#787e94",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "text1300": {
+      "value": "#535867",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "text1400": {
+      "value": "#363842",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "text1500": {
+      "value": "#1d1f25",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "text1600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "subtext1100": {
+      "value": "#9198b6",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "subtext1200": {
+      "value": "#787e95",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "subtext1300": {
+      "value": "#535868",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "subtext1400": {
+      "value": "#363843",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "subtext1500": {
+      "value": "#1d1f25",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "subtext1600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "subtext0100": {
+      "value": "#999999",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "subtext0200": {
+      "value": "#7e7e7e",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "subtext0300": {
+      "value": "#585858",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "subtext0400": {
+      "value": "#383838",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "subtext0500": {
+      "value": "#1f1f1f",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "subtext0600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "overlay0100": {
+      "value": "#9599aa",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "overlay0200": {
+      "value": "#797d93",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "overlay0300": {
+      "value": "#53576b",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "overlay0400": {
+      "value": "#363945",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "overlay0500": {
+      "value": "#1d1f26",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "overlay0600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "overlay1100": {
+      "value": "#9399af",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "overlay1200": {
+      "value": "#777e98",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "overlay1300": {
+      "value": "#53576a",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "overlay1400": {
+      "value": "#353844",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "overlay1500": {
+      "value": "#1d1f26",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "overlay1600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "overlay2100": {
+      "value": "#999999",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "overlay2200": {
+      "value": "#7e7e7e",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "overlay2300": {
+      "value": "#585858",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "overlay2400": {
+      "value": "#383838",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "overlay2500": {
+      "value": "#1f1f1f",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "overlay2600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "surface1100": {
+      "value": "#999999",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "surface1200": {
+      "value": "#7e7e7e",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "surface1300": {
+      "value": "#585858",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "surface1400": {
+      "value": "#383838",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "surface1500": {
+      "value": "#1f1f1f",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "surface1600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "base100": {
+      "value": "#999aa0",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "base200": {
+      "value": "#7d7e87",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "base300": {
+      "value": "#575763",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "base400": {
+      "value": "#373745",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "base500": {
+      "value": "#1d1e2c",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "base600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "mantle100": {
+      "value": "#999a9f",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "mantle200": {
+      "value": "#7e7e85",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "mantle300": {
+      "value": "#575760",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "mantle400": {
+      "value": "#373843",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "mantle500": {
+      "value": "#1e1e2a",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "mantle600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "crust100": {
+      "value": "#99999d",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "crust200": {
+      "value": "#7e7e83",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "crust300": {
+      "value": "#57585e",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "crust400": {
+      "value": "#383840",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "crust500": {
+      "value": "#1e1e27",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "crust600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    },
+    "text0100": {
+      "value": "#999999",
+      "type": "color",
+      "description": "Do not use for UI elements or text. WCAG 3 (APCA) contrast is 54.34:1 against background #ffffff"
+    },
+    "text0200": {
+      "value": "#7e7e7e",
+      "type": "color",
+      "description": "Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67.54:1 against background #ffffff"
+    },
+    "text0300": {
+      "value": "#585858",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff"
+    },
+    "text0400": {
+      "value": "#383838",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 96.7:1 against background #ffffff"
+    },
+    "text0500": {
+      "value": "#1f1f1f",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 103.41:1 against background #ffffff"
+    },
+    "text0600": {
+      "value": "#000000",
+      "type": "color",
+      "description": "Color can be used for small text. WCAG 3 (APCA) contrast is 114.76:1 against background #ffffff"
+    }
+  }
+}

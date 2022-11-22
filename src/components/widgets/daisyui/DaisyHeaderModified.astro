@@ -1,0 +1,118 @@
+---
+import { Icon } from 'astro-icon';
+import Logo from '~/components/atoms/Logo.astro';
+import ToggleTheme from '~/components/core/ToggleTheme.astro';
+import ToggleMenu from '~/components/core/ToggleMenu.astro';
+
+import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permalinks';
+---
+
+<div id="uHeader"></div>
+
+<header
+	id="topHeader"
+	class="header navbar bg-white sticky top-0 mx-auto w-full md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b0"
+>
+	<div class="navbar-center py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+		<div id="logo" class="brand logo">
+			<a class="brand-btn btn btn-ghost normal-case text-xl" href={getHomePermalink()}>
+				<Logo classes="sm:block md:block lg:hidden blur-md invert grayscale md:filter-none dark-invert" width="46" height="46" alt="" />
+				<Logo classes="sm:hidden md:hidden lg:block blur-md invert grayscale md:filter-none  dark-invert" width="95" height="95" alt="" />
+			</a>
+		</div>
+		<nav class="menu">
+			<ul class="menu menu-horizontal bg-base-100 rounded-box">
+				<li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href={getHomePermalink()}>home</a
+					>
+				</li>
+				<li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href={getPermalink('about')}>about</a
+					>
+				</li>
+				<li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href={getBlogPermalink()}>news</a
+					>
+				</li>
+				<li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href={getPermalink('features')}>features</a
+					>
+				</li>
+				<li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href={getPermalink('contact')}>contact</a
+					>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="toggleboxes navbar-end sm:hidden md:hidden lg:block">
+		<ToggleTheme class="btn btn-ghost btn-circle" icon="sun" iconClass="h-5  w-5" />
+		<button class="btn btn-ghost btn-circle">
+			<div class="indicator">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+					><path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+				</svg>
+			</div>
+		</button>
+		<button class="btn btn-ghost btn-circle">
+			<div class="indicator">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+					><path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+					></path>
+				</svg>
+				<span class="badge badge-xs badge-primary indicator-item"></span>
+			</div>
+		</button>
+	</div>
+	<slot name="end" />
+</header>
+
+<style type="text/css">
+.header {
+	z-index: 99;
+		z-index: 9999;
+	}
+
+	.brand {
+		display: inline;
+		float: left;
+	}
+
+	.brand-btn,
+	.brand-btn a {
+		min-height: auto;
+		height: 100%;
+	}
+
+	.brand-btn img {
+	}
+
+	.ununsed {
+	}
+
+	.toggleboxes button {
+		margin: 0 1.15em;
+	}
+
+	.mobmenu {
+		max-width: 60px;
+	}
+</style>

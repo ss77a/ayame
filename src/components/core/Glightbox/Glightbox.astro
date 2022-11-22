@@ -2,8 +2,10 @@
 import path from "node:path";
 import { Icon } from 'astro-icon';
 import Picture from '~/components/core/Picture.astro';
-import '~/assets/css/glightbox.css';
-import '~/assets/css/plyr.css';
+// import '~/assets/css/glightbox.css';
+// import '~/assets/css/plyr.css';
+import '@pkg/glightbox/dist/css/glightbox.css';
+import '@pkg/glightbox/dist/css/plyr.css';
 // make new heros for pages.
 
 interface Props {
@@ -88,8 +90,11 @@ body:not(:fullscreen) {
 }
 
 </style>
-<script is:inline src="/assets/js/glightbox.min.js"></script>
-<script is:inline>
+
+<script is:inline src="/assets/js/vendor/glightbox.min.js"></script>
+
+<script>
+	// import {GLightbox} from "../../../assets/js/vendor/glightbox";
 
             var lightboxDescription = GLightbox({
                 selector: '.glightbox'

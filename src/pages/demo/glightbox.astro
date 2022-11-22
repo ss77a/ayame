@@ -2,7 +2,7 @@
 // import glide component
 
 import Layout from "~/layouts/PageLayout.astro"
-import Glightbox from "~/components/core/Glightbox.astro"
+import Glightbox from "~/components/core/Glightbox/Glightbox.astro"
 ---
 <Layout>
 
@@ -13,17 +13,6 @@ import Glightbox from "~/components/core/Glightbox.astro"
 
   <Glightbox src="" href="" class="imagebox" />
 
-  <div x-data="{ isTouch: false }">
-		<a href="#home" @click="!isTouch && myFunction($event)"
-		 @touchstart.prevent="isTouch = true; myFunction($event)"> 
-			My Link
-		</a>
-	</div>
-  <script type="text/module">
-    function myFunction(evt) {
-      console.table(evt)
-    }
-  </script>
 <style type="text/css">
 
   .gallery {
