@@ -26,8 +26,22 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: mocha.sky.hex,
-				secondary: mocha.lavender.hex,
+				'primary-100': '#4e869f', //   'Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67:1 against background #ffffff'
+				'primary-200': '#477a91', //  'Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 72.5:1 against background #ffffff'
+				'primary-300': '#45768d', //  'Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 74.01:1 against background #ffffff'
+				'primary-400': '#365d6e', //         'Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff'
+				'primary-500': '#2d4c5b', //         'Color can be used for small text. WCAG 3 (APCA) contrast is 90.78:1 against background #ffffff'
+				'primary-600': '#16252c', //         'Color can be used for small text. WCAG 3 (APCA) contrast is 102.6:1 against background #ffffff'
+				'primary-700': '#000000', //         'Color can be used for small text. WCAG 3 (APCA) contrast is 108.78:1 against background #ffffff'
+				primary: '#16252c',
+				'secondary-100': '#777da8', //   'Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67:1 against background #ffffff'
+				'secondary-200': '#6c7198', //  'Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 72.5:1 against background #ffffff'
+				'secondary-300': '#696e94', //  'Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 74.01:1 against background #ffffff'
+				'secondary-400': '#525674', //         'Color can be used for small text. WCAG 3 (APCA) contrast is 84.59:1 against background #ffffff'
+				'secondary-500': '#444760', //         'Color can be used for small text. WCAG 3 (APCA) contrast is 90.78:1 against background #ffffff'
+				'secondary-600': '#21222e', //         'Color can be used for small text. WCAG 3 (APCA) contrast is 102.6:1 against background #ffffff'
+				'secondary-700': '#000000', //         'Color can be used for small text. WCAG 3 (APCA) contrast is 108.78:1 against background #ffffff'
+				secondary: '#6c7198',
 				// Color theme tokens at lightness of 100%, contrast of 110.00000000000001%
 				bkgd: '#ffffff', //              'UI background color. All color contrasts evaluated and generated against this color.'
 				'rosewater-100': '#8a7d7b', //   'Color can be used for UI elements or large text. WCAG 3 (APCA) contrast is 67:1 against background #ffffff'
