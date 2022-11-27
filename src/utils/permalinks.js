@@ -59,3 +59,7 @@ export const getHomePermalink = () => {
 	const permalink = getPermalink();
 	return permalink !== '/' ? permalink + '/' : permalink;
 };
+
+export const getRelativeLink = (link = '') => {
+	return createPath(basePathname, trimSlash(link));
+};
