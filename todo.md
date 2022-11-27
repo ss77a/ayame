@@ -115,4 +115,3 @@ package type module seemed to be needed for a short while in astrowind but now n
 images sometimes break either in build or dev. currently two images from markdown are not displayed might be markdown issues
 critters setup and how to customise it. getting output errors about a drawer class before I started using daisyui drawer class
 astro was able to use files I had removed to trash dir - which was spooky as f\*\*k.
-
