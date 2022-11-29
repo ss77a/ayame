@@ -1,4 +1,5 @@
 ---
+import path from 'path';
 ---
 
 <div id="cookify" class="m-0 fixed-bottom">
@@ -47,10 +48,11 @@
 	</div>
 </div>
 
+<!-- <script is:inline type="module" hoist="true" src="~/assets/js/vendor/cookify.js"></script> -->
 <script>
 	// let cookify = new Cookify;
 
-	import Cookify from '@pkg/cookify/src/index.js';
+	import Cookify from '../../../../node_modules/cookify/src/index.js';
 	var cookify = new Cookify(
 		'cookie_consent',
 		function () {

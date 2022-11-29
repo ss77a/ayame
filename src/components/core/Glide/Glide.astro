@@ -1,17 +1,13 @@
 ---
-import path from 'node:path';
+// import path from 'node:path';
 
 import '@pkg/@glidejs/glide/dist/css/glide.core.css';
 import '@pkg/@glidejs/glide/dist/css/glide.theme.css';
 
-interface Props {
-	id?: string;
-	class?: string;
-}
-const { id = 'glideShow' } = Astro.props;
+const { id = 'glideShow', class: className = 'glide' } = Astro.props;
 ---
 
-<div {id} class="glide">
+<div {id} class={className}>
 	<div class="glide__track" data-glide-el="track">
 		<ul class="glide__slides">
 			<slot />
