@@ -9,12 +9,15 @@ import image from '@astrojs/image';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 
-import { remarkReadingTime } from './src/utils/frontmatter.js';
+import { remarkReadingTime } from './src/utils/frontmatter.mjs';
 import Inspect from 'vite-plugin-inspect';
 
 import { SITE } from './src/config.mjs';
 import critters from 'astro-critters';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const whenExternalScripts = (items = []) =>
+	SITE.googleAnalyticsId ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 // https://astro.build/config
 export default defineConfig({
@@ -39,11 +42,11 @@ export default defineConfig({
 		mdx(),
 
 		/* Disable this integration if you don't use Google Analytics (or other external script). */
-		partytown({
-			config: {
-				forward: ['dataLayer.push'],
-			},
-		}),
+		...whenExternalScripts(() =>
+			partytown({
+				config: { forward: ['dataLayer.push'] },
+			})
+		),
 		critters({
 			path: './dist',
 			logger: 'debug',
