@@ -1,24 +1,19 @@
 ---
-import path from 'node:path';
-import { Icon } from 'astro-icon';
-import { Picture } from '@astrojs/image/components';
-// import '~/assets/css/glightbox.css';
-// import '~/assets/css/plyr.css';
 import '@pkg/glightbox/dist/css/glightbox.css';
 import '@pkg/glightbox/dist/css/plyr.css';
 // make new heros for pages.
 
-interface Props {
+/* interface Props {
 	src?: string;
 	href?: string;
 	class?: string;
-}
+} */
 
 const { class: className = 'glightbox' } = Astro.props;
 ---
 
 <section>
-	<a href="https://placeskull.com/1200/800" class="glightbox">
+	<a href="https://placeskull.com/1200/800" class={class}>
 		<img src="https://placeskull.com/300/200" alt="image" />
 	</a>
 
