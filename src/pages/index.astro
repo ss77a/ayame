@@ -1,6 +1,6 @@
 ---
 import { SITE } from '~/config.mjs';
-import { getCanonical, getHomePermalink, getPermalink } from '~/utils/permalinks';
+import { getCanonical, getHomePermalink, getPermalink, getRelativeLink } from '~/utils/permalinks';
 import Layout from '~/layouts/daisyui/DaisyPageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
@@ -35,7 +35,7 @@ const style = { backgroundImage: 'url(' + landScapeImage['src'] + ')' };
 					Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
 					eaque aut repudiandae et a id nisi.
 				</p>
-				<button class="btn btn-primary">Get Started</button>
+				<button class="btn btn-primary py-0">Get Started</button>
 			</div>
 		</div>
 	</div>
@@ -46,7 +46,7 @@ const style = { backgroundImage: 'url(' + landScapeImage['src'] + ')' };
 			<div class="sub">
 				<div class="item">
 					<p>
-						<a href={getPermalink('demo/glide')}
+						<a href={getRelativeLink('demo/glide')}
 							>glide a customisable responsive slideshow. The component can be customised and many variations of the
 							component can be used and mixed to make various common site features</a
 						>
@@ -56,7 +56,7 @@ const style = { backgroundImage: 'url(' + landScapeImage['src'] + ')' };
 			<div class="sub">
 				<div class="item">
 					<p>
-						<a href={getPermalink('demo/astrowind')}
+						<a href={getRelativeLink('demo/astrowind')}
 							>astrowind (the origins of this project) a feature rich astro starter template take your project to the
 							next galaxy in a few auto completed tabs <small
 								>if you have the right setup and edit the corresponding configs</small
@@ -69,7 +69,7 @@ const style = { backgroundImage: 'url(' + landScapeImage['src'] + ')' };
 			<div class="sub">
 				<div class="item">
 					<p>
-						<a href={getPermalink('demo/glightbox')}
+						<a href={getRelativeLink('demo/glightbox')}
 							>glightbox a versitle lightbox variation that handles mixed media and can display descripts and group
 							class links into galleries customisable</a
 						>
@@ -79,7 +79,7 @@ const style = { backgroundImage: 'url(' + landScapeImage['src'] + ')' };
 			<div class="sub">
 				<div class="item">
 					<p>
-						<a href={getPermalink('demo/cookify')}
+						<a href={getRelativeLink('demo/cookify')}
 							>cookify nice friendly cookie banner. Scripts are categorized and manged according to user choices</a
 						>
 					</p>

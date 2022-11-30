@@ -1,4 +1,5 @@
 ---
+import path from 'path';
 import '@pkg/glightbox/dist/css/glightbox.css';
 import '@pkg/glightbox/dist/css/plyr.css';
 // make new heros for pages.
@@ -13,32 +14,32 @@ const { class: className = 'glightbox' } = Astro.props;
 ---
 
 <section>
-	<a href="https://placeskull.com/1200/800" class={class}>
+	<a href="https://placeskull.com/1200/800" class={className}>
 		<img src="https://placeskull.com/300/200" alt="image" />
 	</a>
 
 	<!-- Simple image -->
-	<!-- a href="https:://placeskull.com/1200/800" class="glightbox" data-glightbox="type: image">
+	<!-- a href="https:://placeskull.com/1200/800" class={className} data-glightbox="type: image">
   <img src="https://placeskull.com/300/200" alt="image" />
 </a -->
 
 	<!-- Video -->
-	<a href="https://player.vimeo.com/video/747605362?h=5dc458ab4d" class="glightbox" data-glightbox="type: image">
+	<a href="https://player.vimeo.com/video/747605362?h=5dc458ab4d" class={className} data-glightbox="type: image">
 		<img src="https://placeskull.com/300/200" alt="image" />
 	</a>
 
 	<!-- Gallery -->
-	<a href="https://placeskull.com/1200/800" class="glightbox" data-gallery="gallery1" data-glightbox="type: image">
+	<a href="https://placeskull.com/1200/800" class={className} data-gallery="gallery1" data-glightbox="type: image">
 		<img src="https://placeskull.com/300/200" alt="image" />
 	</a>
-	<a href="video.mp4" class="glightbox" data-gallery="gallery1" data-glightbox="type: image">
+	<a href="video.mp4" class={className} data-gallery="gallery1" data-glightbox="type: image">
 		<img src="https://placeskull.com/300/200" alt="image" />
 	</a>
 
 	<!-- Simple Description -->
 	<a
 		href="https://placeskull.com/1200/800"
-		class="glightbox"
+		class={className}
 		data-glightbox="title: My title; description: this is the slide description; type: image"
 	>
 		<img src="https://placeskull.com/300/200" alt="image" />
@@ -47,7 +48,7 @@ const { class: className = 'glightbox' } = Astro.props;
 	<!-- Advanced Description -->
 	<a
 		href="https://placeskull.com/1200/800"
-		class="glightbox"
+		class={className}
 		data-glightbox="title: My title; description: .custom-desc1; type: image"
 	>
 		<img src="https://placeskull.com/300/200" alt="image" />
@@ -59,11 +60,11 @@ const { class: className = 'glightbox' } = Astro.props;
 	</div>
 
 	<!-- URL with no extension -->
-	<a href="https://picsum.photos/1200/800" class="glightbox" data-glightbox="type: image">
+	<a href="https://picsum.photos/1200/800" class={className} data-glightbox="type: image">
 		<img src="https://placeskull.com/300/200" alt="image" />
 	</a>
 	<!-- OR using multiple data attributes -->
-	<a href="https://picsum.photos/1200/800" data-type="image" class="glightbox">
+	<a href="https://picsum.photos/1200/800" data-type="image" class={className}>
 		<img src="https://placeskull.com/300/200" alt="image" />
 	</a>
 
@@ -72,7 +73,7 @@ const { class: className = 'glightbox' } = Astro.props;
      See: https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images -->
 	<a
 		href="https://placeskull.com/1200/800"
-		class="glightbox"
+		class={className}
 		data-glightbox="type: image"
 		data-title="Responsive example"
 		data-description="Your browser will choose the optimal image for the resolution"
@@ -95,11 +96,12 @@ const { class: className = 'glightbox' } = Astro.props;
 	}
 </style>
 
-<script is:inline src="/assets/js/vendor/glightbox.min.js"></script>
+<script is:inline src={path.resolve("/public/assets/js/vendor/glightbox.min.js")}></script>
 
 <script>
-	//import { GLightbox } from '@pkg/glightbox/dist/js/glightbox.js';
-	// eslint-disable-line @typescript-eslint/no-unused-vars
+	// import { GLightbox } from '../../../../node_modules/glightbox/dist/js/glightbox.js';
+	/*global GLightbox*/
+	/*eslint no-undef: ["error", { "typeof": true }] */
 	var lightboxDescription = GLightbox({
 		selector: '.glightbox',
 	});

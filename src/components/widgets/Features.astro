@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 
-const items = [
+const defaultItems = [
 	[
 		{
 			title: 'Integration with Tailwind CSS',
@@ -43,6 +43,14 @@ const items = [
 		},
 	],
 ];
+
+interface Props {
+  name: string;
+  items?: array;
+}
+
+const { items = defaultItems, name } = Astro.props;
+
 ---
 
 <section class="scroll-mt-16 border-t border-gray-200 dark:border-slate-800" id="features">
@@ -78,5 +86,8 @@ const items = [
 				))
 			}
 		</div>
+		<!-- <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
+			<slot />
+		</div> -->
 	</div>
 </section>
