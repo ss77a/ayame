@@ -13,11 +13,11 @@ module.exports = {
   overrides: [
     {
       files: ['*.js', '*.astro', '*.mjs', '*.cjs'],
-      plugins: ["astro"],
+      plugins: ['astro'],
       env: {
         // Enables global variables available in Astro components.
         node: true,
-        "astro/astro": true,
+        'astro/astro': true,
         es2020: true,
       },
       rules: {
@@ -30,12 +30,12 @@ module.exports = {
       parserOptions: {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.astro'],
-        sourceType: "module",
+        sourceType: 'module',
       },
       rules: {
-        'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],        // Enable recommended rules
-        "astro/no-conflict-set-directives": "error",
-        "astro/no-unused-define-vars-in-style": "error",
+        'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'], // Enable recommended rules
+        'astro/no-conflict-set-directives': 'error',
+        'astro/no-unused-define-vars-in-style': 'error',
 
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
@@ -44,13 +44,13 @@ module.exports = {
     {
       // Define the configuration for `<script>` tag.
       // Script in `<script>` is assigned a virtual file name with the `.js` extension.
-      files: ["**/*.astro/*.js", "*.astro/*.js"],
+      files: ['**/*.astro/*.js', '*.astro/*.js'],
       env: {
         browser: true,
         es2020: true,
       },
       parserOptions: {
-        sourceType: "module",
+        sourceType: 'module',
       },
       rules: {
         // override/add rules settings here, such as:
@@ -58,7 +58,7 @@ module.exports = {
 
         // If you are using "prettier/prettier" rule,
         // you don't need to format inside <script> as it will be formatted as a `.astro` file.
-        "prettier/prettier": "off",
+        'prettier/prettier': 'off',
       },
     },
     {
