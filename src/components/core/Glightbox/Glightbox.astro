@@ -1,5 +1,5 @@
 ---
-import path from 'path';
+//import path from 'path';
 import '@pkg/glightbox/dist/css/glightbox.css';
 import '@pkg/glightbox/dist/css/plyr.css';
 // make new heros for pages.
@@ -96,12 +96,11 @@ const { class: className = 'glightbox' } = Astro.props;
 	}
 </style>
 
-<script is:inline src={path.resolve("/public/assets/js/vendor/glightbox.min.js")}></script>
+<script is:inline src="../../../../public/assets/js/vendor/glightbox.min.js"></script>
 
 <script>
 	// import { GLightbox } from '../../../../node_modules/glightbox/dist/js/glightbox.js';
-	/*global GLightbox*/
-	/*eslint no-undef: ["error", { "typeof": true }] */
+	// eslint-disable-next-line no-unused-vars, no-undef
 	var lightboxDescription = GLightbox({
 		selector: '.glightbox',
 	});
