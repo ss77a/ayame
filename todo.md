@@ -39,6 +39,7 @@ make cookify/glidejs/glightbox into astro plugins - https://github.com/astro-com
 daisyui components in own directory - ideally make configViewer work with daisyui
 daisyui layouts own directory use same structure
 astro imagetools components
+https://github.com/markteekman/accessible-astro-components
 
 ## vite
 
