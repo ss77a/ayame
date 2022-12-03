@@ -8,3 +8,5 @@ public/assets/css/vendor
 .temp.*
 
 .skits
+playwright-report
+.vitest-preview
