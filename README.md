@@ -15,6 +15,15 @@
 - ✅ **Open Graph tags** for social media sharing.
 - ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
 
+tools
+
+- add info and links etc
+
+workflows
+
+- classes customisation using class:list to migrate classes to more semantic meaningful classes
+- add more
+
 <br>
 
 <img src="./screenshot.png" alt="ayame Theme Screenshot">
