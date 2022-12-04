@@ -8,10 +8,10 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 ---
 
 <header
-	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-gray-100 dark:md:bg-gray-500/90 md:backdrop-blur-sm border-b dark:border-b-0"
+	class="sticky top-0 z-40 mx-auto w-full flex-none border-b bg-white dark:border-b-0 dark:bg-gray-100 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-gray-500/90"
 	id="header"
 >
-	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+	<div class="mx-auto w-full max-w-6xl py-3 px-3 md:flex md:justify-between md:px-4">
 		<div class="flex justify-between">
 			<a class="flex items-center" href={getHomePermalink()}>
 				<Logo />
@@ -22,42 +22,42 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 			</div>
 		</div>
 		<nav
-			class="items-center w-full md:w-auto hidden md:flex text-mantle-600 dark:text-mauve-100 h-screen md:h-auto"
+			class="hidden h-screen w-full items-center text-mantle-600 dark:text-mauve-100 md:flex md:h-auto md:w-auto"
 			aria-label="Main navigation"
 		>
-			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base">
+			<ul class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
 				<li>
 					<a
-						class="font-medium hover:text-mantle-600 dark:hover:text-surface-0-400 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						class="dark:hover:text-surface-0-400 flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600"
 						href="#">Pages</a
 					>
 				</li>
 				<li>
 					<a
-						class="font-medium hover:text-mantle-600 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600 dark:hover:text-white"
 						href={getPermalink('useful-resources-to-create-websites', 'post')}
 						>Resources
 					</a>
 				</li>
 				<li>
 					<a
-						class="font-medium hover:text-mantle-600 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600 dark:hover:text-white"
 						href={getBlogPermalink()}>Blog</a
 					>
 				</li>
 				<li class="md:hidden">
 					<a
-						class="font-bold hover:text-mantle-600 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						class="flex items-center px-4 py-3 font-bold transition duration-150 ease-in-out hover:text-mantle-600 dark:hover:text-white"
 						href="https://github.com/ss77a/ayame"
 						>Github
 					</a>
 				</li>
 			</ul>
-			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+			<div class="mb-4 ml-2 flex items-center md:mb-0 md:self-center">
 				<div class="hidden items-center md:flex">
 					<ToggleTheme iconClass="w-5 h-5" />
 					<a
-						class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+						class="inline-flex items-center rounded-lg p-2.5 text-gray-500 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
 						aria-label="RSS Feed"
 						href="/rss.xml"
 					>
@@ -65,7 +65,7 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 					</a>
 					<a
 						href="https://github.com/ss77a/ayame"
-						class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+						class="inline-block rounded-lg p-2.5 text-gray-500 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
 						aria-label="ayame Github"
 					>
 						<Icon name="tabler:brand-github" class="w-5 h-5" />
