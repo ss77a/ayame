@@ -12,6 +12,7 @@ const containerQuery = require('tailwindcss-container-query');
 const gridAreas = require('@savvywombat/tailwindcss-grid-areas');
 const gridLines = require('@savvywombat/tailwindcss-grid-named-lines');
 const dynVariables = require('@mertasan/tailwindcss-variables');
+const prettier = require('prettier-plugin-tailwindcss');
 
 const macchiato = variants.macchiato,
 	mocha = variants.mocha,
@@ -231,6 +232,7 @@ module.exports = {
 		gridAreas,
 		gridLines,
 		dynVariables,
+		prettier,
 		contentPlaceholder({
 			placeholders: {
 				paragraph: {
