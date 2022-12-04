@@ -6,7 +6,7 @@ const browserTypes = process.env.ALL_BROWSERS ? [chromium, firefox, webkit] : [c
 
 for (const browserType of browserTypes) {
 	describe(`browser:${browserType.name()}`, () => {
-		let browser: Browser;
+		let browser = Browser;
 		beforeAll(async () => {
 			browser = await browserType.launch({ headless: true });
 		});
