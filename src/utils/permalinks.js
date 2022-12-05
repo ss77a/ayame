@@ -3,8 +3,8 @@ import slugify from 'limax';
 import { SITE, BLOG } from '~/config.mjs';
 
 const trim = (str, ch) => {
-	let start = 0,
-		end = str.length;
+	let start = 0;
+	let end = str.length || 0;
 	while (start < end && str[start] === ch) ++start;
 	while (end > start && str[end - 1] === ch) --end;
 	return start > 0 || end < str.length ? str.substring(start, end) : str;
@@ -52,9 +52,6 @@ export const getPermalink = (slug = '', type = 'page') => {
 };
 
 /** */
-export const getBlogPermalink = () => getPermalink(BLOG_BASE);
-
-/** */
 export const getHomePermalink = () => {
 	const permalink = getPermalink();
 	return permalink !== '/' ? permalink + '/' : permalink;
@@ -63,3 +60,5 @@ export const getHomePermalink = () => {
 export const getRelativeLink = (link = '') => {
 	return createPath(basePathname, trimSlash(link));
 };
+
+export const getBlogPermalink = () => getPermalink(BLOG_BASE);

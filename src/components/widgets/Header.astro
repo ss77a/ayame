@@ -4,7 +4,7 @@ import Logo from '~/components/atoms/Logo.astro';
 import ToggleTheme from '~/components/core/ToggleTheme.astro';
 import ToggleMenu from '~/components/core/ToggleMenu.astro';
 
-import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permalinks';
+import { getHomePermalink, getBlogPermalink, getPermalink, getRelativeLink } from '~/utils/permalinks';
 ---
 
 <header
@@ -22,7 +22,7 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 			</div>
 		</div>
 		<nav
-			class="hidden h-screen w-full items-center text-mantle-600 dark:text-mauve-100 md:flex md:h-auto md:w-auto"
+			class="items-center w-full md:w-auto hidden md:flex  text-mantle-600 dark:text-mauve-100 h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible"
 			aria-label="Main navigation"
 		>
 			<ul class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
@@ -31,6 +31,24 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 						class="dark:hover:text-surface-0-400 flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600"
 						href="#">Pages</a
 					>
+					<ul
+						class="dropdown-menu rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white md:min-w-[200px] dark:md:bg-slate-800 drop-shadow-xl"
+					>
+						<li class="">
+							<a
+								class="rounded-t md:hover:bg-mantle-400 dark:hover:bg-mantle-700 py-2 px-4 block whitespace-no-wrap"
+								href="#">Features</a>
+						</li>
+						<li class="">
+							<a class="md:hover:bg-mantle-400 dark:hover:bg-mantle-700 py-2 px-4 block whitespace-no-wrap" href="#"
+								>Profile</a>
+						</li>
+						<li class="">
+							<a
+								class="rounded-b md:hover:bg-mantle-400 dark:hover:bg-mantle-700 py-2 px-4 block whitespace-no-wrap"
+								href="#">Pricing</a>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a

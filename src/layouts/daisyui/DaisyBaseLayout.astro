@@ -2,7 +2,7 @@
 import 'node_modules/daisyui/dist/themes.css';
 import 'node_modules/daisyui/dist/styled.css';
 
-import '../../assets/css/base.css';
+import '../assets/css/base.css';
 
 import MetaTags from '~/components/core/MetaTags.astro';
 import BasicScripts from '~/components/core/BasicScripts.astro';
@@ -11,7 +11,7 @@ const { meta = {} } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html id="root" lang="en" class="mochaOnWhite dark:mochaOffBlack no-js motion-safe:scroll-smooth 2xl:text-[20px]">
+<html id="root" lang="en" class="mochaOnWhite dark:mochaOffBlack motion-safe:scroll-smooth 2xl:text-[20px]">
 	<head>
 		<MetaTags {...meta} />
 	</head>
