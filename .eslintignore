@@ -6,3 +6,7 @@ public/assets/css/vendor
 
 # .temp
 .temp.*
+
+.skits
+playwright-report
+.vitest-preview

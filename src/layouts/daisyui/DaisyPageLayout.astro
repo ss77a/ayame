@@ -1,50 +1,17 @@
 ---
-import Layout from '~/layouts/daisyui/DaisyBaseLayout.astro';
-import Header from '~/components/widgets/daisyui/DaisyHeader.astro';
-import Footer from '~/components/widgets/daisyui/DaisyFooter.astro';
-import Cookify from '~/components/core/Cookify/Cookify.astro';
-import Logo from '~/components/atoms/Logo.astro';
-import { getCanonical, getHomePermalink, getPermalink } from '~/utils/permalinks';
+import Layout from '~/layouts/BaseLayout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import Announcement from '~/components/widgets/Announcement.astro';
 
 const { meta } = Astro.props;
 ---
 
 <Layout {meta}>
-	<div class="drawer">
-		<input id="drawer" type="checkbox" class="drawer-toggle" />
-		<div class="drawer-content flex flex-col">
-			<!-- Navbar -->
-			<Header
-				class="w-full navbar bg-base-300 mx-auto bg-white md:surface-0-200/90 dark:surface-0-600 dark:md:surface-0-700/90 md:backdrop-blur-sm border-b dark:border-b0"
-			>
-				<div slot="end" class="flex-none lg:hidden">
-					<label for="my-drawer-3" class="btn btn-square btn-ghost">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							class="inline-block w-6 h-6 stroke-current"
-							><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-						</svg>
-					</label>
-				</div>
-			</Header>
-			<!-- Page content here -->
-
-			<main>
-				<slot />
-			</main>
-			<Footer />
-			<Cookify />
-		</div>
-		<div class="drawer-side">
-			<label for="drawer" class="drawer-overlay overlay-0-100 dark:overlay-0-100"></label>
-			<ul class="menu p-4 w-80 bg-base-100">
-				<Logo classes="logo" width="96" height="96" alt="" />
-				<!-- Sidebar content here -->
-				<li><a>Sidebar Item 1</a></li>
-				<li><a>Sidebar Item 2</a></li>
-			</ul>
-		</div>
-	</div>
+	<Announcement />
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
 </Layout>

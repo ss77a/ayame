@@ -1,5 +1,4 @@
 ---
-
 import 'node_modules/daisyui/dist/themes.css';
 import 'node_modules/daisyui/dist/styled.css';
 
@@ -12,12 +11,12 @@ const { meta = {} } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html id="root" lang="en" class="mochaOnWhite dark:mochaOffBlack motion-safe:scroll-smooth font-light 2xl:text-[20px]">
+<html id="root" lang="en" class="mochaOnWhite dark:mochaOffBlack motion-safe:scroll-smooth 2xl:text-[20px]">
 	<head>
 		<MetaTags {...meta} />
 	</head>
 
-	<body class="mochaOnWhite dark:mochaOffBlack antialiased bkgd text-0-500 dark:text-0-100 tracking-tight dark:bkgd">
+	<body class="mochaOnWhite dark:mochaOffBlack bkgd text-0-500 dark:text-0-100 dark:bg-crust-600 tracking-tight antialiased">
 		<slot />
 		<BasicScripts />
 		<style is:global>

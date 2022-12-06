@@ -5,13 +5,20 @@
 
 @layer components {
 	.btn {
-		/*
-		 focus:ring-sky-500 focus:ring-offset-sky-200 focus:ring-2 focus:ring-offset-2
-
-		  focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2
-		*/
-		@apply border-none inline-flex items-center justify-center rounded border border-transparent font-medium text-center text-base leading-snug transition py-3 px-6 shadow-lg ease-in duration-200 ;
+		@apply inline-flex items-center justify-center rounded-md border border-teal-500 bg-transparent py-3 px-6 text-center font-medium leading-snug text-peach-600 shadow-md transition duration-200 ease-in text-base hover:border-mantle-600 hover:bg-mantle-100 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-sky-200 dark:border-mauve-500 dark:text-mauve-300 dark:hover:border-mauve-500 dark:hover:bg-mauve-700 md:px-8;
 	}
+
+	.btn-ghost {
+		@apply border-none shadow-none text-mauve-600 hover:text-gray-900 dark:text-mauve-400 dark:hover:text-white;
+	}
+
+	.btn-primary {
+		@apply border-primary-600 bg-primary-600 font-semibold text-white hover:border-primary-700 hover:bg-primary-700 hover:text-white dark:border-primary-700 dark:bg-primary-700 dark:text-white dark:hover:border-primary-700 dark:hover:bg-primary-600;
+	}
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 [astro-icon] > * {
@@ -26,9 +33,9 @@
 	@apply transition;
 }
 [data-aw-toggle-menu].expanded g > path:first-child {
-	@apply -rotate-45 translate-y-[15px] translate-x-[-3px];
+	@apply translate-y-[15px] translate-x-[-3px] -rotate-45;
 }
 
 [data-aw-toggle-menu].expanded g > path:last-child {
-	@apply rotate-45 translate-y-[-8px] translate-x-[14px];
+	@apply translate-y-[-8px] translate-x-[14px] rotate-45;
 }

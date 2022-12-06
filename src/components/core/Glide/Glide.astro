@@ -1,34 +1,27 @@
 ---
-import path from "node:path";
-
 import '@pkg/@glidejs/glide/dist/css/glide.core.css';
 import '@pkg/@glidejs/glide/dist/css/glide.theme.css';
 
-interface Props {
-  id?: string;
-  class?: string;
-}
-const { id = "glideShow" } = Astro.props;
-
+const { id = 'glideShow', class: className = 'glide' } = Astro.props;
 ---
 
-<div {id} class="glide">
-  <div class="glide__track" data-glide-el="track">
-    <ul class="glide__slides">
-      <slot />
-    </ul>
-  </div>
-  <slot name="ctrl" />
-  <slot name="style" />
+<div {id} class={className}>
+	<div class="glide__track" data-glide-el="track">
+		<ul class="glide__slides">
+			<slot />
+		</ul>
+	</div>
+	<slot name="ctrl" />
+	<slot name="style" />
 </div>
 
-
 <style>
-  .glide {
-    width: 100%;
-  }
+	.glide {
+		width: 100%;
+	}
 </style>
+<!-- <script src="../../../../node_modules/@glidejs/glide/dist/glide.esm.js"></script> -->
 <script>
-  import Glide from '../../../../node_modules/@glidejs/glide/dist/glide.esm.js'
-  new Glide('.glide').mount()
+	import Glide from '../../../../node_modules/@glidejs/glide/dist/glide.esm.js';
+	new Glide('.glide').mount();
 </script>

@@ -1,12 +1,19 @@
 ---
 import { Image } from '@astrojs/image/components';
-const { width = '95', height = '95', alt = '', classes = 'brand-logo brand align-middle inlne-block dark:invert' } = Astro.props;
+const {
+	source = import('~/assets/images/demo/logo.png'),
+	width = '95',
+	height = '95',
+	alt = '',
+	brand = false,
+	classes = 'brand-logo brand align-middle inlne-block dark:invert',
+} = Astro.props;
 /* add switch for title default to site title and allow another title to be site and switch for wrapper then this can be resused for associate logos too of course url must be prop also */
 ---
 
 <span
-	class="branding flex inline-block align-middle self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white"
+	class="branding ml-2 flex self-center whitespace-nowrap align-middle font-extrabold text-gray-900 text-2xl dark:text-white"
 >
-<Image src={import("~/assets/images/demo/Tribal-Kitten-Logo.webp")} width={width} height={height} alt={alt} class={classes} />
-	<span class="brand-text brand align-middle inline-block">ayame</span>
+	<Image src={source} width={width} height={height} alt={alt} class={classes} />
+	{brand && <span class="brand-text brand inline-block align-middle">{brand}</span>}
 </span>

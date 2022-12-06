@@ -1,0 +1,32 @@
+---
+import { getPermalink } from '~/utils/permalinks';
+---
+
+<div
+	class="bg-primary-50 hidden overflow-hidden text-ellipsis whitespace-nowrap border-b border-primary-100 px-3 py-2 text-gray-800 text-sm dark:border-slate-800 dark:bg-lavender-300 text-mauve-400 md:block"
+>
+	<span class="bg-primary-200 py-0.5 px-1 font-semibold text-xs text-mauve-600">NEW</span>
+	<a
+		href={getPermalink('get-started-website-with-astro-tailwind-css', 'post')}
+		class="underline decoration-dotted decoration-1 underline-offset-2"
+		>Get started with <a href="https://ayame.vercel.app">Ayame6</a> is based on <a
+			href="https://github.com/ss77a/Ayame6">Ayame6</a
+		> to create a website using <a href="http://astro.build">Astro</a> and <a href="https://tailwindcss.com/"
+			>Tailwind CSS</a
+		> »</a
+	>
+	<a
+		target="_blank"
+		rel="noopener"
+		class="float-right"
+		title="Follow @ss77a on Twitter"
+		href="https://twitter.com/intent/user?screen_name=ss77a"
+	>
+		<img
+			src="https://img.shields.io/twitter/url/https/twitter.com/ss77a.svg?style=social&label=Follow%20%40ss77a"
+			alt="Follow @ss77a"
+			width="125"
+			height="20"
+		/>
+	</a>
+</div>

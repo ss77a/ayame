@@ -20,24 +20,64 @@ const meta = {
 ---
 
 <Layout {meta}>
-<div class="hero min-h-screen" style="background-image: url(https://placeimg.com/1000/800/arch);">
-  <div class="hero-overlay bg-opacity-60"></div>
-  <div class="hero-content text-center text-neutral-content">
-    <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-      <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div>
+	<div class="hero min-h-screen" style="background-image: url(https://placeimg.com/1000/800/arch);">
+		<div class="hero-overlay bg-opacity-60"></div>
+		<div class="hero-content text-center text-neutral-content">
+			<div class="max-w-md">
+				<h1 class="mb-5 font-bold text-5xl">Hello there</h1>
+				<p class="mb-5">
+					Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
+					eaque aut repudiandae et a id nisi.
+				</p>
+				<button class="btn-primary btn">Get Started</button>
+			</div>
+		</div>
+	</div>
 	<Hero />
-  <Features>
-    <section class="w-full m-5">
-      <p><a href="/glide/">glide</a></p>
-      <p><a href="/glightbox/">glightbox</a></p>
-      <p><a href="/cookify/">cookify</a></p>
-    </section>
-  </Features>
+	<Features
+		items={[
+			[
+				{
+					title: 'Integration with Tailwind CSS, Daisy UI and configViewer',
+					description: 'A component library that, can be themed .',
+					icon: 'tabler:brand-tailwind',
+				},
+				{
+					title: 'Ready-to-use Components',
+					description: '',
+					icon: 'tabler:components',
+				},
+				{
+					title: 'Best Practices',
+					description: '',
+					icon: 'tabler:list-check',
+				},
+			],
+			[
+				{
+					href: 'demo/glide',
+					title: 'Glide JS',
+					description:
+						'Slideshow that is responsive and fully featured. Can be customised and has a variety of display options.',
+					icon: 'tabler:rocket',
+				},
+				{
+					href: 'demo/glightbox',
+					title: 'Glightbox',
+					description:
+						'A versitle lightbox script that can handle a range of different types of media and referances to them. Can be used to display a simple gallery.',
+					icon: 'tabler:arrows-right-left',
+				},
+				{
+					href: 'demo/cookify',
+					title: 'Cookify',
+					description:
+						'A buttery smooth cookie script that can be tailored to your specific use case. Provides a user interface to manage the use of scripts and informs user of the cookies required.',
+					icon: 'tabler:bulb',
+				},
+			],
+		]}
+	/>
 	<Steps />
 	<Features2 />
 	<Features3 />

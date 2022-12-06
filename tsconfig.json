@@ -1,18 +1,13 @@
 {
-    "extends": "astro/tsconfigs/base",
-    "compilerOptions": {
-        "types": [
-            "astro/client"
-        ],
-        "allowJs": true,
-        "baseUrl": ".",
-        "paths": {
-            "~/*": [
-                "src/*"
-            ],
-            "@pkg/*": [
-                "node_modules/*"
-            ]
-        }
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "types": ["astro/client"],
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "@src/*": ["src/*"],
+      "@pkg/*": ["node_modules/*"]
     }
+  }
 }
