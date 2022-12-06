@@ -8,13 +8,13 @@ import { getHomePermalink, getBlogPermalink, getPermalink, getRelativeLink } fro
 ---
 
 <header
-	class="sticky top-0 z-40 mx-auto w-full flex-none border-b bg-white dark:border-b-0 dark:bg-gray-100 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-gray-500/90"
+	class="sticky top-0 z-40 mx-auto w-full flex-none border-b bg-white dark:border-b-0 dark:bg-mantle-700 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-mantle-700/90"
 	id="header"
 >
 	<div class="mx-auto w-full max-w-6xl py-3 px-3 md:flex md:justify-between md:px-4">
 		<div class="flex justify-between">
 			<a class="flex items-center" href={getHomePermalink()}>
-				<Logo />
+				<Logo brand="ayame6" src={import('~/assets/images/demo/logo.png')} />
 			</a>
 			<div class="flex items-center md:hidden">
 				<ToggleTheme />
@@ -22,13 +22,13 @@ import { getHomePermalink, getBlogPermalink, getPermalink, getRelativeLink } fro
 			</div>
 		</div>
 		<nav
-			class="items-center w-full md:w-auto hidden md:flex  text-mantle-600 dark:text-mauve-100 h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible"
+			class="items-center w-full md:w-auto hidden md:flex  text-mantle-600 dark:text-mauve-400 h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible"
 			aria-label="Main navigation"
 		>
 			<ul class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
 				<li>
 					<a
-						class="dark:hover:text-surface-0-400 flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600"
+						class="dark:hover:text-mauve-400 dark:text-mauve-200 flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600"
 						href="#">Pages</a
 					>
 					<ul
@@ -52,14 +52,14 @@ import { getHomePermalink, getBlogPermalink, getPermalink, getRelativeLink } fro
 				</li>
 				<li>
 					<a
-						class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600 dark:hover:text-white"
+						class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600 dark:hover:text-mauve-400 dark:text-mauve-200"
 						href={getPermalink('useful-resources-to-create-websites', 'post')}
 						>Resources
 					</a>
 				</li>
 				<li>
 					<a
-						class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600 dark:hover:text-white"
+						class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600 dark:hover:text-mauve-400 dark:text-mauve-200"
 						href={getBlogPermalink()}>Blog</a
 					>
 				</li>
@@ -75,7 +75,7 @@ import { getHomePermalink, getBlogPermalink, getPermalink, getRelativeLink } fro
 				<div class="hidden items-center md:flex">
 					<ToggleTheme iconClass="w-5 h-5" />
 					<a
-						class="inline-flex items-center rounded-lg p-2.5 text-gray-500 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+						class="inline-flex items-center rounded-lg p-2.5 text-mauve-500 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-mauve-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
 						aria-label="RSS Feed"
 						href="/rss.xml"
 					>
@@ -83,7 +83,7 @@ import { getHomePermalink, getBlogPermalink, getPermalink, getRelativeLink } fro
 					</a>
 					<a
 						href="https://github.com/ss77a/ayame"
-						class="inline-block rounded-lg p-2.5 text-gray-500 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+						class="inline-block rounded-lg p-2.5 text-mauve-500 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-mauve-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
 						aria-label="ayame Github"
 					>
 						<Icon name="tabler:brand-github" class="w-5 h-5" />

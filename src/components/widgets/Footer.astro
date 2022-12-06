@@ -65,13 +65,13 @@ const social = [
 				<div class="mb-2">
 					<a class="inline-block font-bold text-xl" href={getHomePermalink()}>Ayame6</a>
 				</div>
-				<div class="text-gray-600 text-sm">
+				<div class="text-mauve-600 text-sm">
 					<a
-						class="text-gray-600 transition duration-150 ease-in-out hover:text-gray-700 hover:underline dark:text-gray-400"
+						class="text-mauve-600 transition duration-150 ease-in-out hover:text-mantle-700 hover:underline dark:text-mauve-400"
 						href="#">Terms</a
 					> ·
 					<a
-						class="text-gray-600 transition duration-150 ease-in-out hover:text-gray-700 hover:underline dark:text-gray-400"
+						class="text-mauve-600 transition duration-150 ease-in-out hover:text-mantle-700 hover:underline dark:text-mauve-400"
 						href="#">Privacy Policy</a
 					>
 				</div>
@@ -79,13 +79,13 @@ const social = [
 			{
 				links.map(({ title, items }) => (
 					<div class="col-span-6 md:col-span-3 lg:col-span-2">
-						<div class="mb-2 font-medium text-gray-800 dark:text-gray-300">{title}</div>
+						<div class="mb-2 font-medium text-gray-800 dark:text-mauve-300">{title}</div>
 						{items && Array.isArray(items) && items.length > 0 && (
 							<ul class="text-sm">
 								{items.map(({ title, href }) => (
 									<li class="mb-2">
 										<a
-											class="text-gray-600 transition duration-150 ease-in-out hover:text-gray-700 hover:underline dark:text-gray-400"
+											class="text-mauve-600 transition duration-150 ease-in-out hover:text-mantle-700 hover:underline dark:text-mauve-400"
 											href={href}
 										>
 											{title}
@@ -104,7 +104,7 @@ const social = [
 					social.map(({ label, href, icon }) => (
 						<li>
 							<a
-								class="inline-flex items-center rounded-lg p-2.5 text-gray-500 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+								class="inline-flex items-center rounded-lg p-2.5 text-mauve-500 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-mauve-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
 								aria-label={label}
 								href={href}
 							>
@@ -115,13 +115,13 @@ const social = [
 				}
 			</ul>
 
-			<div class="mr-4 text-gray-700 text-sm dark:text-slate-400">
+			<div class="mr-4 text-mantle-700 text-sm dark:text-slate-400">
 				<span
-					class="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://ss77a.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"
+					class="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"
 				>
 				</span>
-				Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://ss77a.com/"> ss77a</a> · All rights
-				reserved.
+				Made by <a class="text-blue-600 hover:underline dark:text-mauve-200" href="https://onwidget.com/">onwidget</a> · All
+				rights reserved.
 			</div>
 		</div>
 	</div>

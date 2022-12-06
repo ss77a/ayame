@@ -53,7 +53,13 @@ export default defineConfig({
 			inlineFonts: true,
 			keyframes: 'critical',
 		}),
-		compress(),
+		compress({
+			css: true,
+			html: true,
+			img: true,
+			js: true,
+			svg: true,
+		}),
 	],
 	/* this is an extension of mdx - a message says that the mdx call should be removed it causes issues. as does removing the extension - images wont build from blog files */
 	markdown: {
