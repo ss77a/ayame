@@ -15,7 +15,7 @@ const image = await findImage(post.image);
 	{
 		image && (
 			<a class="group relative block" href={getPermalink(post.slug, 'post')}>
-				<div class="relative h-0 overflow-hidden rounded bg-gray-400 pb-[56.25%] shadow-lg text-mauve-700 md:pb-[75%] lg:pb-[56.25%]">
+				<div class="relative h-0 overflow-hidden rounded bg-gray-400 pb-[56.25%] text-mauve-700 shadow-lg md:pb-[75%] lg:pb-[56.25%]">
 					{image && (
 						<Picture
 							src={image}
