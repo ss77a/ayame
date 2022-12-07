@@ -19,8 +19,8 @@ for (const browserType of browserTypes) {
 			await page.goto('http://localhost:3000');
 			await page.locator('#ready').waitFor({ state: 'attached' });
 			await page.evaluate(() => {
-				return new Promise(async (r) => {
-					const mod = await new Function("return import('/mod.ts')")();
+				return new Promise((r) => {
+					const mod = new Function("return import('/mod.ts')")();
 					console.log('hello in eval', Object.keys(mod));
 					r(null);
 				});
