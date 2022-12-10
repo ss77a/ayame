@@ -4,3 +4,4 @@ node_modules
 .changeset
 .vitest-preview
 playwright-report
+coverage
