@@ -3,7 +3,7 @@
 <img src="lighthouse-score.png" align="right"
      alt="ayame Lighthouse Score" width="100" height="358">
 
-**ayame** is a free and open-source template to make your website using **Astro + Tailwind CSS**. Ready to start a new project and designed taking into account best practices.
+**Ayame** is a free and open-source template to make your website using **Astro + Tailwind CSS**. Ready to start a new project and designed taking into account best practices.
 
 ## Features
 
@@ -26,8 +26,9 @@ workflows
 
 <br>
 
-<img src="./screenshot.png" alt="ayame Theme Screenshot">
+<img src="./screenshot.jpg" alt="ayame Theme Screenshot">
 
+[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square&logo=onwidget&logoColor=white&labelColor=101827)](https://onwidget.com)
 [![License](https://img.shields.io/github/license/ss77a/ayame?style=flat-square&color=eeeeee&labelColor=000000)](https://github.com/ss77a/ayame/blob/main/LICENSE.md)
 [![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/ss77a)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/ss77a/ayame#contributing)
@@ -48,6 +49,7 @@ workflows
   - [Deploy](#deploy)
 - [Roadmap](#roadmap)
 - [Frequently Asked Questions](#frequently-asked-questions)
+- [Related Projects](#related-projects)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
@@ -58,7 +60,7 @@ workflows
 
 ## Demo
 
-📌 [https://ayame.vercel.app/](https://ayame.vercel.app/)
+📌 [https://ayame6.vercel.app/](https://ayame6.vercel.app/)
 
 <br>
 
@@ -70,7 +72,7 @@ Very little vanilla javascript is used only to provide basic functionality so th
 
 ### Project structure
 
-Inside ayame template, you'll see the following folders and files:
+Inside Ayame template, you'll see the following folders and files:
 
 ```
 /
@@ -222,17 +224,19 @@ Clone this repository on own GitHub account and deploy to Vercel:
 
 ## Roadmap
 
-- _Project_:
-  - Create simple and clear strategy to get template updates
-- _Blog_:
-  - Improve blog design
-  - Create component or utilities for related posts
-  - Add more _shortcodes_ or _embed_ functions to posts in Markdown: (eg video, tweet...)
-- _More widgets_:
-  - Add more Tailwind components useful for most scenarios (Features, Contact, Call to Actions, Content, FAQs ...)
-  - Create external library or place with useful Tailwind components
-- _More Examples_: Add commonly used example pages (Ex: About, Terms, Services...)
-- _Documentation_: Create detailed documentation with best practices and redesign tips
+### Base
+
+- [ ] Improve blog design (More generic design that adapts to more needs).
+- [ ] Create component or utilities for related posts.
+- [ ] Add more _shortcodes_ or _embed_ functions to posts in Markdown: (eg Video, Tweet...).
+- [ ] Add more Tailwind components useful for most scenarios (Features, Contact, Call to Actions, Content, FAQs...)
+- [ ] Add commonly used example pages (Ex: About, Terms, Profile, Services...).
+- [ ] Create detailed documentation with best practices and redesign tips.
+
+### Advanced
+
+- [ ] Create external library or place with useful Tailwind components.
+- [ ] Create examples of AstroWind in CodeSanbox or a similar platform that can be easily synchronized with new updates. (Redesign, Integration with React or Svelte components, Use of Tailwind plugins, Connection to headless CMS ...).
 
 <br>
 
@@ -243,6 +247,10 @@ Clone this repository on own GitHub account and deploy to Vercel:
 -
 
 <br>
+
+## Related projects
+
+- [Qwind](https://qwind.pages.dev/) - A template to make your website using Qwik + Tailwind CSS.
 
 ## Contributing
 
@@ -255,4 +263,4 @@ Initially created by [onWidget](https://onwidget.com) and maintained by a commun
 
 ## License
 
-**ayame** is licensed under the Unlicense license — see the [LICENSE](https://github.com/ss77a/ayame/blob/main/LICENSE.md) file for details.
+**Ayame** is licensed under the Unlicense license — see the [LICENSE](https://github.com/ss77a/ayame/blob/main/LICENSE.md) file for details.
