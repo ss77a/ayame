@@ -11,21 +11,20 @@ import { debug } from 'vitest-preview';
 // }
 
 /**
-* get content file from fixtues and load it 
-*/
+ * get content file from fixtues and load it
+ */
 function getFiles(file: any, path: string) {
- let contentFile: string = file[`/test/fixtures/${path}/${file}.astro`];
- // workaround: normalize end of lines to pass windows ci
- if (contentFile) contentFile = contentFile.replace(/(\r\n|\r)/gm, '\n');
- return { content: contentFile };
+	let contentFile: string = file[`/test/fixtures/${path}/${file}.astro`];
+	// workaround: normalize end of lines to pass windows ci
+	if (contentFile) contentFile = contentFile.replace(/(\r\n|\r)/gm, '\n');
+	return { content: contentFile };
 }
 
 /**
  */
- export function test(name: string) {
-
+export function test(name: string) {
 	const { content } = getFiles('index', 'imagecheck');
 
 	expect(content, '<img*/>');
 	debug();
- }
+}
