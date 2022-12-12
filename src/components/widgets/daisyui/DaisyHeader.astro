@@ -4,34 +4,94 @@ import Logo from '~/components/atoms/Logo.astro';
 import ToggleTheme from '~/components/core/ToggleTheme.astro';
 import ToggleMenu from '~/components/core/ToggleMenu.astro';
 
-import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permalinks';
+import { getHomePermalink, getBlogPermalink, getPermalink, getRelativeLink } from '~/utils/permalinks';
 ---
 
-<nav class="bg-white shadow-lg">
-	<div class="mx-auto max-w-6xl px-4">
+<header
+	class="sticky top-0 z-40 mx-auto w-full flex-none border-b bg-white dark:border-b-0 dark:bg-mantle-700 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-mantle-700/90"
+	id="header"
+>
+	<div class="mx-auto w-full max-w-6xl py-3 px-3 md:flex md:justify-between md:px-4">
 		<div class="flex justify-between">
-			<div class="flex space-x-7">
-				<!-- Website Logo -->
-				<div>
-					<a href="/" class="flex items-center py-4 px-2">
-						<Logo src="~/assets/images/demo/Tribal-Kitten-Logo.webp" alt="Logo" class="h-8 w-8 mr-2" />
-						<span class="font-semibold text-mauve-500 text-lg">Ayame6</span>
-					</a>
-				</div>
-				<!-- Primary Navbar items -->
-				<div class="hidden items-center space-x-1 md:flex">
-					<a href="" class="border-b-4 border-green-500 py-4 px-2 font-semibold text-green-500">Home</a>
-					<a href="" class="py-4 px-2 font-semibold text-mauve-500 transition duration-300 hover:text-green-500"
-						>Services</a
-					>
-					<a href="" class="py-4 px-2 font-semibold text-mauve-500 transition duration-300 hover:text-green-500"
-						>About</a
-					>
-					<a href="" class="py-4 px-2 font-semibold text-mauve-500 transition duration-300 hover:text-green-500"
-						>Contact Us</a
-					>
-				</div>
+			<a class="flex items-center" href={getHomePermalink()}>
+				<Logo
+					brand="ayame6"
+					src={import('~/assets/images/demo/logo.png')}
+					classes="brand-logo brand align-middle inlne-block dark:invert"
+				/>
+			</a>
+			<div class="flex items-center md:hidden">
+				<ToggleTheme />
+				<ToggleMenu />
 			</div>
 		</div>
+		<nav
+			class="hidden h-[calc(100vh-100px)] md:h-auto overflow-y-auto w-full items-center overflow-y-auto text-mantle-600 dark:text-mauve-400 md:flex md:h-auto md:w-auto md:overflow-visible"
+			aria-label="Main navigation"
+		>
+			<ul class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-surface-1600">
+				<li>
+					<a
+						class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600 dark:text-mauve-200 dark:hover:text-mauve-400"
+						href="#">Pages</a
+					>
+					<ul
+						class="dropdown-menu rounded pl-4 font-medium drop-shadow-xl md:absolute md:hidden md:min-w-[200px] md:bg-white md:pl-0 dark:md:bg-mantle-500"
+					>
+						<li class="dropdown">
+							<a
+								class="whitespace-no-wrap block py-2 px-4 dark:hover:bg-mantle-700 md:hover:bg-mantle-400"
+								href={getRelativeLink('/about')}>About</a
+							>
+						</li>
+						<li class="dropdown">
+							<a
+								class="whitespace-no-wrap block rounded-b py-2 px-4 dark:hover:bg-mantle-700 md:hover:bg-mantle-400"
+								href={getRelativeLink('/features')}>Features</a
+							>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a
+						class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600 dark:text-mauve-200 dark:hover:text-mauve-400"
+						href={getPermalink('useful-resources-to-create-websites', 'post')}
+						>Resources
+					</a>
+				</li>
+				<li>
+					<a
+						class="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-mantle-600 dark:text-mauve-200 dark:hover:text-mauve-400"
+						href={getBlogPermalink()}>Blog</a
+					>
+				</li>
+				<li class="md:hidden">
+					<a
+						class="flex items-center px-4 py-3 font-bold transition duration-150 ease-in-out hover:text-mantle-600 dark:hover:text-white"
+						href="https://github.com/ss77a/ayame"
+						>Github
+					</a>
+				</li>
+			</ul>
+			<div class="mb-4 ml-2 flex items-center md:mb-0 md:self-center">
+				<div class="hidden items-center md:flex">
+					<ToggleTheme iconClass="w-5 h-5" />
+					<a
+						class="inline-flex items-center rounded-lg p-2.5 text-mauve-500 text-sm hover:bg-surface-1200 focus:outline-none focus:ring-4 focus:ring-surface-2400 dark:text-mauve-400 dark:hover:bg-crust-700 dark:focus:ring-surface-1700"
+						aria-label="RSS Feed"
+						href={getRelativeLink('/rss.xml')}
+					>
+						<Icon name="tabler:rss" class="w-5 h-5" />
+					</a>
+					<a
+						href="https://github.com/ss77a/ayame"
+						class="inline-block rounded-lg p-2.5 text-mauve-500 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-mauve-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+						aria-label="ayame Github"
+					>
+						<Icon name="tabler:brand-github" class="w-5 h-5" />
+					</a>
+				</div>
+			</div>
+		</nav>
 	</div>
-</nav>
+</header>
