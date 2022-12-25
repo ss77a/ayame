@@ -74,6 +74,9 @@ export default defineConfig({
 	},
 	vite: {
 		plugins: [Inspect()],
+		ssr: {
+			external: ['svgo'],
+		},
 		resolve: {
 			alias: {
 				'~': path.resolve(__dirname, './src'),
