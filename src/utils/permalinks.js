@@ -42,9 +42,6 @@ export const getPermalink = (slug = '', type = 'page') => {
 		case 'post':
 			return createPath(basePathname, POST_BASE, _slug);
 
-		case 'raw':
-			return createPath(basePathname, trimSlash(slug));
-
 		case 'page':
 		default:
 			return createPath(basePathname, _slug);
@@ -57,8 +54,10 @@ export const getHomePermalink = () => {
 	return permalink !== '/' ? permalink + '/' : permalink;
 };
 
-export const getRelativeLink = (link = '') => {
+/** */
+export const getRelativeLink = (link = "") => {
 	return createPath(basePathname, trimSlash(link));
-};
+}
 
+/** */
 export const getBlogPermalink = () => getPermalink(BLOG_BASE);

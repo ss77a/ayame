@@ -6,45 +6,35 @@ import BlogList from '~/components/blog/List.astro';
 import Pagination from '~/components/atoms/Pagination.astro';
 
 import { fetchPosts } from '~/utils/posts';
-import { getCanonical, getPermalink, cleanSlug, TAG_BASE } from '~/utils/permalinks';
+import { getCanonical, getPermalink, BLOG_BASE } from '~/utils/permalinks';
 
 export async function getStaticPaths({ paginate }) {
-	if (BLOG?.disabled || BLOG?.tag?.disabled) return [];
+	if (BLOG?.disabled || BLOG?.blog?.disabled) return [];
 
 	const posts = await fetchPosts();
 
-	const tags = new Set();
-	posts.map((post) => {
-		Array.isArray(post.tags) && post.tags.map((tag) => tags.add(tag.toLowerCase()));
+	return paginate(posts, {
+		params: { blog: BLOG_BASE || undefined },
+		pageSize: BLOG.postsPerPage,
 	});
-
-	return Array.from(tags).map((tag) =>
-		paginate(
-			posts.filter((post) => Array.isArray(post.tags) && post.tags.find((elem) => elem.toLowerCase() === tag)),
-			{
-				params: { tag: cleanSlug(tag), tags: TAG_BASE || undefined },
-				pageSize: BLOG.postsPerPage,
-				props: { tag },
-			}
-		)
-	);
 }
 
-const { page, tag } = Astro.props;
-
+const { page } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 
 const meta = {
-	title: `Posts by tag '${tag}' ${currentPage > 1 ? `— Page ${currentPage} ` : ''}— ${SITE.name}`,
+	title: `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ''}— ${SITE.name}`,
 	description: SITE.description,
-	canonical: getCanonical(getPermalink(tag, 'tag')),
-	noindex: true,
+	canonical: getCanonical(getPermalink(BLOG?.blog?.pathname)),
+	ogType: 'blog',
+	noindex: currentPage > 1,
 };
 ---
 
-<Layout meta={meta}>
+<Layout {meta}>
 	<Fragment slot="title">
-		Tag: {tag}
+		News and tutorials about
+		<span>AstroWind</span>
 	</Fragment>
 	<BlogList posts={page.data} />
 	<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
