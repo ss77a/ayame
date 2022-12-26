@@ -1,0 +1,95 @@
+---
+---
+
+<div id="cookify" class="fixed-bottom m-0">
+	<a id="cookifyCtrlBtn" class="ghost-btn btn-ghost btn" data-c-view="button" href="#"
+		><img src="/assets/images/cookie.svg" width="55" height="55" alt="cookies control" />
+	</a>
+
+	<div id="cookifyManage" class="mx-md-5 d-none rounded bg-white p-3 shadow-lg" data-c-view="manage">
+		<h2>Manage Cookies</h2>
+		<p>
+			We use cookies to provide and secure our websites, as well as to analyze the usage of our websites, in order to
+			offer you a great user experience. To learn more about our use of cookies see our <a href="#" target="_blank"
+				>Privacy Policy</a
+			>.
+		</p>
+
+		<div class="my-3">
+			<div class="form-check">
+				<input data-c-check="necessary" class="toggle-primary toggle" type="checkbox" value="" id="necessary" />
+				<label class="form-check-label" for="necessary"> Necessary</label>
+			</div>
+
+			<div class="form-check">
+				<input
+					data-c-check="marketing"
+					data-c-check-default="true"
+					class="toogle-primary toggle"
+					type="checkbox"
+					value=""
+					id="marketing"
+				/>
+				<label class="form-check-label" for="marketing"> Marketing</label>
+			</div>
+
+			<div class="form-check">
+				<input data-c-check="performance" class="toggle-primary toggle" type="checkbox" value="" id="performance" />
+				<label class="form-check-label" for="performance"> Performance</label>
+			</div>
+		</div>
+
+		<div class="d-flex">
+			<div data-c-action="accept" class="flex-fill me-1 btn-secondary btn">Accept</div>
+			<div data-c-action="all" class="flex-fill btn-primary btn">All</div>
+			<div data-c-action="necessary" class="flex-fill ms-1 btn-primary btn">Necessary</div>
+		</div>
+	</div>
+</div>
+
+<!-- <script is:inline type="module" hoist="true" src="~/assets/js/vendor/cookify.js"></script> -->
+<script>
+	// let cookify = new Cookify;
+
+	import Cookify from '../../../../node_modules/cookify/src/index.js';
+	var cookify = new Cookify(
+		'cookie_consent',
+		function () {
+			document.getElementById('cookifyManage').classList.add('d-none');
+		},
+		function (data) {
+			console.log(data);
+		},
+		false,
+		false,
+		'necessary',
+		function (cookify) {
+			console.table(cookify);
+			//show the cookie popup as long as the user has not seen it
+			if (cookify.getDataState(cookify.viewedName)) {
+				document.getElementById('cookifyManage').classList.add('d-none');
+			} else {
+				document.getElementById('cookifyMange').classList.remove('d-none');
+			}
+		}
+	);
+
+	document.getElementById('cookifyCtrlBtn').addEventListener('click', function () {
+		document.getElementById('cookifyManage').classList.remove('d-none');
+		console.log('clicked');
+	});
+
+	if (!cookify.getDataState(cookify.viewedName)) {
+		document.getElementById('cookifyManage').classList.remove('d-none');
+	}
+</script>
+
+<style type="text/css">
+	#cookify {
+		width: 100%;
+	}
+
+	.d-none {
+		display: none;
+	}
+</style>

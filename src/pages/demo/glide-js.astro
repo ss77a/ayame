@@ -1,0 +1,51 @@
+---
+// import glide component
+
+import Layout from '~/layouts/PageLayout.astro';
+import Glide from '~/components/core/Glide/Glide.astro';
+---
+
+<Layout>
+	<Glide class="glide">
+		<li class="glide__slide">
+			<img src="https://placeskull.com/600/350/377663/7/1/" width="600" height="350" />
+		</li>
+		<li class="glide__slide">
+			<img src="https://placeskull.com/600/350/445674/1" width="600" height="350" />
+		</li>
+		<li class="glide__slide">
+			<img src="https://placeskull.com/600/350/348623/2/1" width="600" height="350" />
+		</li>
+		<li class="glide__slide">
+			<img src="https://placeskull.com/600/350/232578/2/1" width="600" height="350" />
+		</li>
+
+		<li class="glide__slide">
+			<img src="https://placeskull.com/600/350/235168/4/1" width="600" height="350" />
+		</li>
+
+		<div slot="ctrl" data-glide-el="controls">
+			<button data-glide-dir="<<">Start</button>
+			<button data-glide-dir=">>">End</button>
+		</div>
+	</Glide>
+
+	<div class="glide-notes">
+		<p>glide here</p>
+		<p>
+			Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem
+			pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud
+			ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut
+			officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris
+			cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+			eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
+			ullamco ut ea consectetur et est culpa et culpa duis.
+		</p>
+	</div>
+
+	<style type="text/css">
+		.glide {
+			background: palevioletred;
+		}
+	</style>
+</Layout>

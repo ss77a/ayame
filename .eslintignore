@@ -1,3 +1,13 @@
 dist
 node_modules
 .github
+public/assets/js/vendor
+public/assets/css/vendor
+
+# .temp
+.temp.*
+
+.skits
+playwright-report
+.vitest-preview
+coverage

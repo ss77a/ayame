@@ -1,73 +1,89 @@
 ---
 import { Icon } from 'astro-icon';
 
-const items = [
-	{
-		title: 'Headers',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:home',
-	},
-	{
-		title: 'Footers',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:faq',
-	},
-	{
-		title: 'Features',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:video-projector',
-	},
-	{
-		title: 'Call-to-Action',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:video-projector',
-	},
-	{
-		title: 'Pricing',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:calculator',
-	},
-	{
-		title: 'Testimonial',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:voice-presentation',
-	},
+const defaultItems = [
+	[
+		{
+			title: 'Integration with Tailwind CSS',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+			icon: 'tabler:brand-tailwind',
+		},
+		{
+			title: 'Ready-to-use Components',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+			icon: 'tabler:components',
+		},
+		{
+			title: 'Best Practices',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+			icon: 'tabler:list-check',
+		},
+	],
+	[
+		{
+			title: 'Excellent Page Speed',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+			icon: 'tabler:rocket',
+		},
+		{
+			title: 'Frequently updated',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+			icon: 'tabler:arrows-right-left',
+		},
+		{
+			title: 'Open to new ideas and contributions',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+			icon: 'tabler:bulb',
+		},
+	],
 ];
+
+const { items = defaultItems, name = 'features' } = Astro.props;
 ---
 
-<section class="relative">
-	<div class="absolute inset-0 bg-primary-50 dark:bg-slate-800 pointer-events-none mb-32" aria-hidden="true"></div>
-	<div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
-			<div class="mb-8 text-center">
-				<p class="text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase">Components</p>
-				<h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
-					Most used widgets
-				</h2>
-				<p class="max-w-3xl mx-auto text-center text-xl text-gray-600 dark:text-slate-400">
-					Provides frequently used components for building websites using Tailwind CSS
-				</p>
-			</div>
-			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-12 dark:text-white">
-				{
-					items.map(({ title, description, icon }) => (
-						<div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-xl hover:shadow-lg transition dark:border dark:border-slate-800">
-							<div class="flex items-center mb-4">
-								<Icon name={icon} class="w-12 h-12" />
-
-								<div class="ml-4 text-xl font-bold">{title}</div>
+<section class="scroll-mt-16 border-t border-gray-200 dark:border-slate-800" id={name}>
+	<div class="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:py-20">
+		<div class="mb-10 max-w-xl sm:text-center md:mx-auto md:mb-12 lg:max-w-2xl">
+			<!-- <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
+                <slot />
+            </div> -->
+			<p class="font-semibold uppercase tracking-wide text-primary-600 text-base dark:text-primary-200">
+				<a href="/features">Features</a>
+			</p>
+			<h2 class="leading-tighter font-heading mb-4 font-bold tracking-tighter text-4xl md:text-5xl">
+				What's interesting about <span class="whitespace-nowrap">Ayame6</span>
+			</h2>
+			<p class="mx-auto max-w-3xl text-mauve-600 dark:text-mauve-200 text-xl sm:text-center">
+				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa
+				quae.
+			</p>
+		</div>
+		<div class="mx-auto grid space-y-6 md:grid-cols-2 md:space-y-0">
+			{
+				items.map((subitems) => (
+					<div class="space-y-8 sm:px-8">
+						{subitems.map(({ title, description, icon, href }) => (
+							<div class="flex max-w-md flex-row">
+								<div class="mb-4 mr-4">
+									<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary-500 dark:bg-primary-700">
+										{icon && <Icon name={icon} class="icon-light h-6 w-6 text-white" />}
+									</div>
+								</div>
+								<div>
+									<h3 class="mb-3 font-bold text-xl">{(href && <a href={href}> {title} </a>) || title}</h3>
+									<p class="text-mauve-600 dark:text-mauve-200">{description}</p>
+								</div>
 							</div>
-							<p class="text-gray-500 dark:text-gray-400 text-md">{description}</p>
-						</div>
-					))
-				}
-			</div>
+						))}
+					</div>
+				))
+			}
 		</div>
 	</div>
 </section>
