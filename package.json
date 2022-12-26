@@ -53,12 +53,11 @@
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/line-clamp": "^0.4.2",
         "@tailwindcss/typography": "^0.5.8",
-        "@typescript-eslint/eslint-plugin": "^5.47.0",
-        "@typescript-eslint/parser": "^5.47.0",
+        "@typescript-eslint/eslint-plugin": "^5.47.1",
+        "@typescript-eslint/parser": "^5.47.1",
         "@vitest/coverage-c8": "^0.25.8",
         "animated-tailwindcss": "^3.3.0",
         "astro": "^1.7.2",
-        "astro-compress": "^1.1.24",
         "astro-critters": "^1.1.24",
         "astro-icon": "^0.8.0",
         "autoprefixer": "^10.4.13",
@@ -96,22 +95,11 @@
         "vitest": "^0.25.8",
         "vitest-preview": "^0.0.1"
     },
-    "resolutions": {
-        "css-select": "4.2.1",
-        "css-what": "5.1.0",
-        "domhandler": "4.3.1"
-    },
-    "overrides": {
-        "css-select": "^4.2.1",
-        "css-what": "^5.1.0",
-        "domhandler": "^4.3.1",
-        "astro-critters": {
-            "critters": {
-                "css-select": "4.2.1"
-            }
-        }
-    },
     "engines": {
         "node": "^14.15.0 || >=16.0.0"
+    },
+    "dependencies": {
+        "astro-compressor": "^0.1.2",
+        "astro-html-minifier": "^0.2.0"
     }
 }
