@@ -15,11 +15,11 @@ const image = await findImage(post.image);
 	{
 		image && (
 			<a class="group relative block" href={getPermalink(post.slug, 'post')}>
-				<div class="relative h-0 overflow-hidden rounded bg-gray-400 pb-[56.25%] text-mauve-700 shadow-lg md:pb-[75%] lg:pb-[56.25%]">
+				<div class="relative h-0 overflow-hidden rounded bg-mantle-400 pb-[56.25%] text-mauve-700 shadow-lg md:pb-[75%] lg:pb-[56.25%]">
 					{image && (
 						<Picture
 							src={image}
-							class="absolute inset-0 mb-6 h-full w-full rounded bg-gray-400 object-cover shadow-lg dark:bg-mauve-200"
+							class="absolute inset-0 mb-6 h-full w-full rounded bg-mantle-400 object-cover shadow-lg dark:bg-mauve-200"
 							widths={[400, 900]}
 							sizes="(max-width: 900px) 400px, 900px"
 							alt={post.title}

@@ -10,12 +10,12 @@ const image = await findImage(post.image);
 ---
 
 <article class="mb-6 transition">
-	<div class="relative mb-6 h-0 overflow-hidden rounded bg-gray-400 pb-[56.25%] shadow-lg dark:bg-mauve-200">
+	<div class="relative mb-6 h-0 overflow-hidden rounded bg-mantle-400 pb-[56.25%] shadow-lg dark:bg-mauve-200">
 		{
 			image && (
 				<Picture
 					src={image}
-					class="w-full rounded bg-gray-400 object-cover shadow-lg dark:bg-mauve-200"
+					class="w-full rounded bg-mantle-400 object-cover shadow-lg dark:bg-mauve-200"
 					widths={[400, 900]}
 					sizes="(max-width: 900px) 400px, 900px"
 					alt={post.title}

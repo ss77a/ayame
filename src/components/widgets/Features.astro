@@ -59,7 +59,7 @@ const { items = defaultItems, name = 'features' } = Astro.props;
 			<h2 class="leading-tighter font-heading mb-4 font-bold tracking-tighter text-4xl md:text-5xl">
 				What's interesting about <span class="whitespace-nowrap">Ayame6</span>
 			</h2>
-			<p class="mx-auto max-w-3xl text-mauve-600 text-mauve-400 text-xl sm:text-center">
+			<p class="mx-auto max-w-3xl text-mauve-600 dark:text-mauve-200 text-xl sm:text-center">
 				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa
 				quae.
 			</p>
@@ -77,7 +77,7 @@ const { items = defaultItems, name = 'features' } = Astro.props;
 								</div>
 								<div>
 									<h3 class="mb-3 font-bold text-xl">{(href && <a href={href}> {title} </a>) || title}</h3>
-									<p class="text-mauve-600 text-mauve-400">{description}</p>
+									<p class="text-mauve-600 dark:text-mauve-200">{description}</p>
 								</div>
 							</div>
 						))}
