@@ -1,54 +1,56 @@
 # 🚀 ayame
 
+some quirks to workout
+
 **Ayame** is a free and open-source template to make your website using **Astro + Tailwind CSS**. Ready to start a new
 project and designed taking into account best practices.
 
 ## Features
 
-* ✅ Integration with **Tailwind CSS**
-([@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/)) supporting **Dark mode**.
+- ✅ Integration with **Tailwind CSS**
+  ([@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/)) supporting **Dark mode**.
 
-* ✅ **Production-ready** scores in [Lighthouse](https://web.dev/measure/) and [PageSpeed
-Insights](https://pagespeed.web.dev/) reports.
+- ✅ **Production-ready** scores in [Lighthouse](https://web.dev/measure/) and [PageSpeed
+  Insights](https://pagespeed.web.dev/) reports.
 
-* ✅ **Fast and SEO friendly blog** with automatic **RSS feed**
-([@astrojs/rss](https://docs.astro.build/en/guides/rss/)),
-**[MDX](https://docs.astro.build/en/guides/integrations-guide/mdx/)**[
-support](https://docs.astro.build/en/guides/integrations-guide/mdx/), **Categories & Tags**, **Social Share** buttons,
-...
+- ✅ **Fast and SEO friendly blog** with automatic **RSS feed**
+  ([@astrojs/rss](https://docs.astro.build/en/guides/rss/)),
+  **[MDX](https://docs.astro.build/en/guides/integrations-guide/mdx/)**[
+  support](https://docs.astro.build/en/guides/integrations-guide/mdx/), **Categories & Tags**, **Social Share** buttons,
+  ...
 
-* ✅ **Image optimization** ([@astrojs/images](https://docs.astro.build/en/guides/integrations-guide/image/)) and **Font
-optimization**.
+- ✅ **Image optimization** ([@astrojs/images](https://docs.astro.build/en/guides/integrations-guide/image/)) and **Font
+  optimization**.
 
-* ✅ Generation of **project sitemap** based on your routes
-([@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)).
+- ✅ Generation of **project sitemap** based on your routes
+  ([@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)).
 
-* ✅ **Open Graph tags** for social media sharing.
+- ✅ **Open Graph tags** for social media sharing.
 
-* ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
+- ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
 
-* TBC Milkdown?? - the milkdown plugin for vscode can edit mdx files too -- idea spin a server that can access the blog
-data and edit them&#x20;
+- TBC Milkdown?? - the milkdown plugin for vscode can edit mdx files too -- idea spin a server that can access the blog
+  data and edit them&#x20;
 
 tools
 
-* add info and links etc
+- add info and links etc
 
 workflows
 
-* classes customisation using class:list to migrate classes to more semantic meaningful classes
+- classes customisation using class:list to migrate classes to more semantic meaningful classes
 
-* add more
+- add more
 
-[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square\&logo=onwidget\&logoColor=white\&labelColor=101827)](https://onwidget.com)
-[![License](https://img.shields.io/github/license/ss77a/ayame?style=flat-square\&color=eeeeee\&labelColor=000000)](https://github.com/ss77a/ayame/blob/main/LICENSE.md)
+[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square&logo=onwidget&logoColor=white&labelColor=101827)](https://onwidget.com)
+[![License](https://img.shields.io/github/license/ss77a/ayame?style=flat-square&color=eeeeee&labelColor=000000)](https://github.com/ss77a/ayame/blob/main/LICENSE.md)
 [![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/ss77a)
 [![Contributions
 Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/ss77a/ayame#contributing)
 [![Known
 Vulnerabilities](https://snyk.io/test/github/ss77a/ayame/badge.svg?style=flat-square)](https://snyk.io/test/github/ss77a/ayame)
-![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=flat-square\&logo=prettier\&logoColor=F7BA3E)
-![Eslint](https://img.shields.io/badge/eslint-3A33D1?style=flat-square\&logo=eslint\&logoColor=white)
+![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=flat-square&logo=prettier&logoColor=F7BA3E)
+![Eslint](https://img.shields.io/badge/eslint-3A33D1?style=flat-square&logo=eslint&logoColor=white)
 
 - [🚀 ayame](#-ayame)
   - [Features](#features)
@@ -148,15 +150,15 @@ CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://gi
 
 All commands are run from the root of the project, from a terminal:
 
-| Command | Action |
+| Command               | Action                                             |
 | :-------------------- | :------------------------------------------------- |
-| `npm install` | Installs dependencies |
-| `npm run dev` | Starts local dev server at `localhost:3000` |
-| `npm run build` | Build your production site to `./dist/` |
-| `npm run preview` | Preview your build locally, before deploying |
-| `npm run format` | Format codes with Prettier |
-| `npm run lint:eslint` | Run Eslint |
-| `npm run astro ...` | Run CLI commands like `astro add`, `astro preview` |
+| `npm install`         | Installs dependencies                              |
+| `npm run dev`         | Starts local dev server at `localhost:3000`        |
+| `npm run build`       | Build your production site to `./dist/`            |
+| `npm run preview`     | Preview your build locally, before deploying       |
+| `npm run format`      | Format codes with Prettier                         |
+| `npm run lint:eslint` | Run Eslint                                         |
+| `npm run astro ...`   | Run CLI commands like `astro add`, `astro preview` |
 
 ### Configuration
 
@@ -164,42 +166,42 @@ Basic configuration file: `./src/config.mjs`
 
 ```javascript
 export const SITE = {
-name: 'Example',
+  name: 'Example',
 
-origin: 'https://example.com',
-basePathname: '/', // Change this if you need to deploy to Github Pages, for example
-trailingSlash: false, // Generate permalinks with or without "/" at the end
+  origin: 'https://example.com',
+  basePathname: '/', // Change this if you need to deploy to Github Pages, for example
+  trailingSlash: false, // Generate permalinks with or without "/" at the end
 
-title: 'Example - This is the homepage title of Example',
-description: 'This is the homepage description of Example',
+  title: 'Example - This is the homepage title of Example',
+  description: 'This is the homepage description of Example',
 
-googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-googleSiteVerificationId: false, // or some value,
+  googleAnalyticsId: false, // or "G-XXXXXXXXXX",
+  googleSiteVerificationId: false, // or some value,
 };
 
 export const BLOG = {
-disabled: false,
-postsPerPage: 4,
+  disabled: false,
+  postsPerPage: 4,
 
-blog: {
-disabled: false,
-pathname: 'blog', // blog main path, you can change this to "articles" (/articles)
-},
+  blog: {
+    disabled: false,
+    pathname: 'blog', // blog main path, you can change this to "articles" (/articles)
+  },
 
-post: {
-disabled: false,
-pathname: '', // empty for /some-post, value for /pathname/some-post
-},
+  post: {
+    disabled: false,
+    pathname: '', // empty for /some-post, value for /pathname/some-post
+  },
 
-category: {
-disabled: false,
-pathname: 'category', // set empty to change from /category/some-category to /some-category
-},
+  category: {
+    disabled: false,
+    pathname: 'category', // set empty to change from /category/some-category to /some-category
+  },
 
-tag: {
-disabled: false,
-pathname: 'tag', // set empty to change from /tag/some-tag to /some-tag
-},
+  tag: {
+    disabled: false,
+    pathname: 'tag', // set empty to change from /tag/some-tag to /some-tag
+  },
 };
 ```
 
@@ -235,36 +237,36 @@ Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=
 
 ### Base
 
-* [ ] Improve blog design (More generic design that adapts to more needs).
+- [ ] Improve blog design (More generic design that adapts to more needs).
 
-* [ ] Create component or utilities for related posts.
+- [ ] Create component or utilities for related posts.
 
-* [ ] Add more *shortcodes* or *embed* functions to posts in Markdown: (eg Video, Tweet...).
+- [ ] Add more _shortcodes_ or _embed_ functions to posts in Markdown: (eg Video, Tweet...).
 
-* [ ] Add more Tailwind components useful for most scenarios (Features, Contact, Call to Actions, Content, FAQs...)
+- [ ] Add more Tailwind components useful for most scenarios (Features, Contact, Call to Actions, Content, FAQs...)
 
-* [ ] Add commonly used example pages (Ex: About, Terms, Profile, Services...).
+- [ ] Add commonly used example pages (Ex: About, Terms, Profile, Services...).
 
-* [ ] Create detailed documentation with best practices and redesign tips.
+- [ ] Create detailed documentation with best practices and redesign tips.
 
 ### Advanced
 
-* [ ] Create external library or place with useful Tailwind components.
+- [ ] Create external library or place with useful Tailwind components.
 
-* [ ] Create examples of AstroWind in CodeSanbox or a similar platform that can be easily synchronized with new updates.
-(Redesign, Integration with React or Svelte components, Use of Tailwind plugins, Connection to headless CMS ...).
+- [ ] Create examples of AstroWind in CodeSanbox or a similar platform that can be easily synchronized with new updates.
+      (Redesign, Integration with React or Svelte components, Use of Tailwind plugins, Connection to headless CMS ...).
 
 ## Frequently Asked Questions
 
-* Why?
+- Why?
 
-*
+-
 
-*
+-
 
 ## Related projects
 
-* [Qwind](https://qwind.pages.dev/) - A template to make your website using Qwik + Tailwind CSS.
+- [Qwind](https://qwind.pages.dev/) - A template to make your website using Qwik + Tailwind CSS.
 
 ## Contributing
 
