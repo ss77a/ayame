@@ -27,7 +27,8 @@ pnpm-lock.yaml
 
 # skits directory
 .skits/
-/test-results/
-/playwright-report/
-/playwright/.cache/
+test-results/
+playwright-report/
+playwright/.cache/
 .vitest-preview/
+coverage/

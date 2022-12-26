@@ -1,31 +1,30 @@
-import { Browser, chromium, firefox, webkit } from 'playwright';
-import { afterAll, beforeAll, describe, it } from 'vitest';
-import { debug } from 'vitest-preview';
+/// <reference types="vitest" />
+import { defineConfig } from 'vite';
 
-const browserTypes = process.env.ALL_BROWSERS ? [chromium, firefox, webkit] : [chromium];
-
-for (const browserType of browserTypes) {
-	describe(`browser:${browserType.name()}`, () => {
-		let browser: Browser;
-		beforeAll(async () => {
-			browser = await browserType.launch({ headless: true });
-		});
-		afterAll(async () => {
-			browser?.close();
-		});
-		it('evaluate with vite module', async () => {
-			const page = await browser.newPage();
-			page.on('console', (msg) => console.log(msg.text()));
-			await page.goto('http://localhost:3000');
-			await page.locator('#ready').waitFor({ state: 'attached' });
-			await page.evaluate(() => {
-				return new Promise(async (r) => {
-					const mod = await new Function("return import('/mod.ts')")();
-					console.log('hello in eval', Object.keys(mod));
-					r(null);
-				});
-			});
-		});
-		debug();
-	});
-}
+export default defineConfig({
+	include: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx,astro}'],
+	exclude: [
+		'**/node_modules/**',
+		'**/dist/**',
+		'**/cypress/**',
+		'**/.{idea,git,cache,output,temp}/**',
+		'**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,astro}.config.*',
+	],
+	plugins: [
+		{
+			// name: 'a-vitest-plugin-that-changes-config',
+			// config: () => ({
+			//   test: {
+			//   },
+			// }),
+		},
+	],
+	test: {
+		globals: true,
+		setupFiles: 'src/setupTests.mjs',
+		globalSetup: [],
+		coverage: {
+			reporter: ['text', 'json', 'html'],
+		},
+	},
+});

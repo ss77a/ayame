@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 
-const items = [
+const defaultItems = [
 	{
 		title: 'Headers',
 		description:
@@ -39,31 +39,33 @@ const items = [
 		icon: 'flat-color-icons:voice-presentation',
 	},
 ];
+
+const { items = defaultItems, name = 'features2' } = Astro.props;
 ---
 
 <section class="relative">
-	<div class="bg-primary-50 pointer-events-none absolute inset-0 mb-32 dark:bg-lavender-300" aria-hidden="true"></div>
+	<div class="bg-subtext-1200 pointer-events-none absolute inset-0 mb-32 dark:bg-crust-500" aria-hidden="true"></div>
 	<div class="relative mx-auto max-w-6xl px-4 sm:px-6">
 		<div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
 			<div class="mb-8 text-center">
-				<p class="font-semibold uppercase tracking-wide text-primary-600 text-base dark:text-primary-200">Components</p>
+				<p class="font-semibold uppercase tracking-wide text-primary-600 text-base dark:text-primary-200">{name}</p>
 				<h2 class="leading-tighter font-heading mb-4 font-bold tracking-tighter text-4xl md:text-5xl">
 					Most used widgets
 				</h2>
-				<p class="mx-auto max-w-3xl text-center text-mauve-600 text-xl text-mauve-400">
+				<p class="mx-auto max-w-3xl text-center text-mauve-600 dark:text-mauve-200 text-xl">
 					Provides frequently used components for building websites using Tailwind CSS
 				</p>
 			</div>
 			<div class="my-12 grid items-start gap-6 dark:text-white md:grid-cols-2 lg:grid-cols-3">
 				{
-					items.map(({ title, description, icon }) => (
+					items.map(({ title, description, icon, href }) => (
 						<div class="relative flex flex-col rounded bg-white p-6 shadow-xl transition hover:shadow-lg dark:border dark:border-slate-800 dark:bg-lavender-500">
 							<div class="mb-4 flex items-center">
 								<Icon name={icon} class="h-12 w-12" />
 
-								<div class="ml-4 font-bold text-xl">{title}</div>
+								<div class="ml-4 font-bold text-xl">{(href && <a href={href}> {title} </a>) || title}</div>
 							</div>
-							<p class="text-md text-mauve-500 dark:text-mauve-400">{description}</p>
+							<p class="text-md text-mauve-500 dark:text-mauve-200">{description}</p>
 						</div>
 					))
 				}

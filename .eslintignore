@@ -10,3 +10,4 @@ public/assets/css/vendor
 .skits
 playwright-report
 .vitest-preview
+coverage

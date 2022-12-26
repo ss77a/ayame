@@ -1,11 +1,11 @@
 ---
-publishDate: 'Nov 20 2022'
-title: 'Catppucin and DaisyUI Theming'
+publishDate: 'Aug 08 2022'
+title: 'Ayame in depth'
 description: 'Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti.'
-image: '~/assets/images/demo/flatpuccin/flatppuccin_4k_macchiato_inverted.png'
-category: 'Ayame'
-tags: [astro, tailwind css, front-end, catppuccin, daisyui]
-canonical: https://ayame.vercel.app/catppuccin-daisyui # When posting content to multiple platforms at the same time (such as this website and Medium) and want to specify the ultimate authority. Remove it to automatically generate canonical
+image: '~/assets/images/ayame.jpg'
+category: 'Tutorials'
+tags: [astro, tailwind css, front-end]
+canonical: https://astrowind.vercel.app/ayame-in-depth # When posting content to multiple platforms at the same time (such as this website and Medium) and want to specify the ultimate authority. Remove it to automatically generate canonical
 ---
 
 ## Dictum integer fusce ac ridiculus et odio sollicitudin diam at

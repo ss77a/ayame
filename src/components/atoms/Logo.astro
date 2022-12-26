@@ -6,14 +6,15 @@ const {
 	height = '95',
 	alt = '',
 	brand = false,
-	classes = 'brand-logo brand align-middle inlne-block dark:invert',
+	classes = 'brand-logo brand align-middle block dark:invert',
+	brandClasses = 'brand-text brand block align-middle mt-4',
 } = Astro.props;
 /* add switch for title default to site title and allow another title to be site and switch for wrapper then this can be resused for associate logos too of course url must be prop also */
 ---
 
 <span
-	class="branding ml-2 flex self-center whitespace-nowrap align-middle font-extrabold text-gray-900 text-2xl dark:text-white"
+	class="branding ml-2 flex self-center whitespace-nowrap align-middle font-extrabold text-crust-700 text-2xl dark:text-white"
 >
 	<Image src={source} width={width} height={height} alt={alt} class={classes} />
-	{brand && <span class="brand-text brand inline-block align-middle">{brand}</span>}
+	{brand && <span class={brandClasses}>{brand}</span>}
 </span>

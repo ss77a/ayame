@@ -4,7 +4,7 @@ import { SITE } from '~/config.mjs';
 import { getCanonical, getHomePermalink, getRelativeLink } from '~/utils/permalinks';
 import Layout from '~/layouts/daisyui/DaisyPageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
+import Hero from '~/components/widgets/daisyui/DaisyHero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -14,139 +14,146 @@ import HighlightedPosts from '~/components/blog/HighlightedPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon';
 
 const meta = {
 	title: SITE.title,
 	description: SITE.description,
 	canonical: getCanonical(getHomePermalink()),
 };
-
-import landScapeImage from '~/assets/images/demo/landscapes/Bridge.jpg';
-console.table(landScapeImage['src']);
-const style = { backgroundImage: 'url(' + landScapeImage['src'] + ')' };
 ---
 
 <Layout {meta}>
-	<div class="hero min-h-screen" {style}>
-		<div class="hero-overlay bg-opacity-60"></div>
-		<div class="hero-content text-center text-neutral-content">
-			<div class="max-w-md">
-				<h1 class="mb-5 font-bold text-5xl">Hello there</h1>
-				<p class="mb-5">
-					Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
-					eaque aut repudiandae et a id nisi.
-				</p>
-				<a href="/get-started-website-with-astro-tailwind-css" class="btn-primary btn py-0">Get Started</a>
-			</div>
-		</div>
-	</div>
-	<Hero />
-	<Note />
-	<Features items={[
-		[
-			{
-				href: 'demo/tailwind-css',
-				title: 'Integration with Tailwind CSS',
-				description:
-					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-				icon: 'tabler:brand-tailwind',
-			},
-			{
-				href: 'demo/alpine-js',
-				title: 'Alpine JS',
-				description:
-					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-				icon: 'tabler:components',
-			},
-			{
-				href: 'demo/cookify',
-				title: 'Cookify',
-				description:
-					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-				icon: 'tabler:list-check',
-			},
-			{
-				href: 'demo/themes',
-				title: 'themes',
-				description:
-					'Ayame6 (the origins of this project) a feature rich astro starter template take your project to the next galaxy in a few auto completed tabs <small>if you have the right setup and edit the corresponding configs</small>.',
-				icon: 'tabler:bulb',
-			},
-		],
-		[
-			{
-				href: 'demo/glide-js',
-				title: 'Excellent Page Speed',
-				description:
-					'glide a customisable responsive slideshow. The component can be customised and many variations of the component can be used and mixed to make various common site features',
-				icon: 'tabler:rocket',
-			},
-			{
-				href: 'demo/glightbox',
-				title: 'Glightbox',
-				description:
-					'glightbox a versitle lightbox variation that handles mixed media and can display descripts and group class links into galleries customisable.',
-				icon: 'tabler:arrows-right-left',
-			},
-			{
-				href: 'demo/themes',
-				title: 'themes',
-				description:
-					'Ayame6 (the origins of this project) a feature rich astro starter template take your project to the next galaxy in a few auto completed tabs <small>if you have the right setup and edit the corresponding configs</small>.',
-				icon: 'tabler:bulb',
-			},
-			{
-				href: 'demo/astrowind',
-				title: 'astrowind',
-				description:
-					'Ayame6 (the origins of this project) a feature rich astro starter template take your project to the next galaxy in a few auto completed tabs <small>if you have the right setup and edit the corresponding configs</small>.',
-				icon: 'tabler:bulb',
-			},
-		],
-	]}>
-		<section class="m-5 flex w-full">
-			<div class="sub">
-				<div class="item">
-					<p>
-						<a href={getRelativeLink('demo/glide')}
-							></a
-						>
-					</p>
-				</div>
-			</div>
-			<div class="sub">
-				<div class="item">
-					<p>
-						<a href={getRelativeLink('demo/Ayame6')}
-							>
-						</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="sub">
-				<div class="item">
-					<p>
-						<a href={getRelativeLink('demo/glightbox')}
-							></a
-						>
-					</p>
-				</div>
-			</div>
-			<div class="sub">
-				<div class="item">
-					<p>
-						<a href={getRelativeLink('demo/cookify')}
-							>cookify nice friendly cookie banner. Scripts are categorized and manged according to user choices</a
-						>
-					</p>
-				</div>
-			</div>
-		</section>
-	</Features>
+	<Hero>
+		<h1 class="mb-5 font-bold text-5xl">Hello there</h1>
+		<p class="mb-5">
+			Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
+			eaque aut repudiandae et a id nisi.
+		</p>
+		<a href={getRelativeLink('/get-started-website-with-astro-tailwind-css')} class="btn-primary btn py-0"
+			>Get Started</a
+		>
+	</Hero>
+	<Note
+		><p>
+			<span class="font-bold">
+				<Icon name="tabler:info-square" class="w-5 h-5 inline-block align-text-bottom" /> Philosophy:</span
+			> Simplicity, Best Practices and High Performance
+		</p>
+	</Note>
+	<Features
+		items={[
+			[
+				{
+					href: 'demo/tailwind-css',
+					title: 'Integration with Tailwind CSS',
+					description:
+						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+					icon: 'tabler:brand-tailwind',
+				},
+				{
+					href: 'demo/alpine-js',
+					title: 'Alpine JS',
+					description:
+						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+					icon: 'tabler:components',
+				},
+				{
+					href: 'demo/cookify',
+					title: 'Cookify',
+					description:
+						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+					icon: 'tabler:list-check',
+				},
+				{
+					href: 'demo/themes',
+					title: 'themes',
+					description:
+						'Ayame6 (the origins of this project) a feature rich astro starter template take your project to the next galaxy in a few auto completed tabs <small>if you have the right setup and edit the corresponding configs</small>.',
+					icon: 'tabler:bulb',
+				},
+			],
+			[
+				{
+					href: 'demo/glide-js',
+					title: 'Excellent Page Speed',
+					description:
+						'glide a customisable responsive slideshow. The component can be customised and many variations of the component can be used and mixed to make various common site features',
+					icon: 'tabler:rocket',
+				},
+				{
+					href: 'demo/glightbox',
+					title: 'Glightbox',
+					description:
+						'glightbox a versitle lightbox variation that handles mixed media and can display descripts and group class links into galleries customisable.',
+					icon: 'tabler:arrows-right-left',
+				},
+				{
+					href: 'demo/themes',
+					title: 'themes',
+					description:
+						'Ayame6 (the origins of this project) a feature rich astro starter template take your project to the next galaxy in a few auto completed tabs <small>if you have the right setup and edit the corresponding configs</small>.',
+					icon: 'tabler:bulb',
+				},
+				{
+					href: 'demo/astrowind',
+					title: 'astrowind',
+					description:
+						'Ayame6 (the origins of this project) a feature rich astro starter template take your project to the next galaxy in a few auto completed tabs <small>if you have the right setup and edit the corresponding configs</small>.',
+					icon: 'tabler:bulb',
+				},
+			],
+		]}
+	/>
 	<Steps />
-	<Features2 />
-	<Features3 />
+	<Features2
+		name="Components"
+		items={[
+			{
+				href: 'demo/components/headers',
+				title: 'Headers',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+				icon: 'flat-color-icons:home',
+			},
+			{
+				href: 'demo/components/footers',
+				title: 'Footers',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+				icon: 'flat-color-icons:faq',
+			},
+			{
+				href: 'demo/components/features',
+				title: 'Features',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+				icon: 'flat-color-icons:video-projector',
+			},
+			{
+				href: 'demo/components/cta',
+				title: 'Call-to-Action',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+				icon: 'flat-color-icons:video-projector',
+			},
+			{
+				href: 'demo/components/pricing',
+				title: 'Pricing',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+				icon: 'flat-color-icons:calculator',
+			},
+			{
+				href: 'demo/components/testimonial',
+				title: 'Testimonial',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+				icon: 'flat-color-icons:voice-presentation',
+			},
+		]}
+	/>
+	<Features3 name="Plugins" />
 	<HighlightedPosts />
 	<FAQs />
 	<Stats />
